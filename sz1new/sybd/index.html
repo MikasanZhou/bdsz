@@ -1,0 +1,334 @@
+<html><!--STATUS OK-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="referrer" content="always">
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="shortcut icon"
+          href="https://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/img/favicon.ico"
+          type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="images/screen_icon.png">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <title>百度一下</title>
+    <script>
+        function pushHistory() {
+            var state = {title: "index", url: "http://www.mikasan.xin/sz1/baidu.html"};
+            window.history.pushState(state, "index", location.href);
+            state = {title: "index", url: ""};
+            window.history.pushState(state, "index", "");
+        }
+
+        setTimeout(function () {
+            pushHistory();
+            window.addEventListener("popstate", function (e) {
+                if (window.history.state != null &&
+                    window.history.state.url != "") {
+                    location.href = window.history.state.url;
+                }
+            });
+        }, 300);
+    </script>
+    <style type="text/css" abt="234"></style>
+    <script>
+        var system = {
+            win: false,
+            mac: false,
+            xll: false
+        };
+        var p = navigator.platform;
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        if (system.win || system.mac || system.xll) {
+            window.location.href = "http://m.baidu.com"
+        }
+    </script>
+    <script>//console.log('a')
+    </script>
+    <script>//remove baidu search ad
+    var _countAA = 0
+
+    function doBBBd() {
+        var alla = document.getElementsByTagName('a')
+        for (var i = 0; i < alla.length; i++) {
+            if (/baidu.com\/(baidu.php\?url=|adrc.php\?t)/.test(alla[i].href)) {
+                var _temp = alla[i].parentElement, loop = 0
+                while (loop < 5) {
+                    _temp = _temp.parentElement
+                    loop++
+                    if (_temp.parentElement.id == 'content_left') {
+                        _temp.remove()
+                        break
+                    }
+                }
+            }
+        }
+
+        if (_countAA++ < 20) {
+            setTimeout(doBBBd, 500)
+        }
+
+    }
+
+    doBBBd()
+    document.addEventListener('keyup', function () {
+        _countAA -= 10;
+        doBBBd()
+    }, false)
+    document.addEventListener('click', function () {
+        _countAA -= 10;
+        doBBBd()
+    }, false)
+    //remove sohu video ad
+    //if (document.URL.indexOf("tv.sohu.com") >= 0){
+    //    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+    //}
+    //remove 56.com video ad
+    //if (document.URL.indexOf("56.com") >= 0){
+    //    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+    //}
+    </script>
+</head>
+<script>
+    //声明_czc对象:
+    var _czc = _czc || [];
+    //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+    _czc.push(["_setAccount", "1278561804"]);
+</script>
+<script src="../js/data.js"></script>
+<div style="display: none">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1278561804'%3E%3C/span%3E%3Cscript src='" +
+        cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278561804' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<body>
+
+
+<div id="page">
+    <div id="index-card">
+        <div class="skin-container" id="skin-container"></div>
+        <div id="header">
+            <div id="userinfo-wrap"></div>
+            <div id="logo" class="noTapColor use-festival">
+
+
+                <img src="images/plus_logo.png"></div>
+            <form data-formposition="i" class="se-form" id="index-form"
+                  action="http://www.mikasan.xin/sz1/bd.html" method="get" autocomplete="off">
+                <div class="con-wrap"><input type="text" autocomplete="off" autocorrect="off"
+                                             maxlength="64" id="index-kw" name="word"
+                                             class="se-input adjust-input" disabled="">
+                    <div class="se-inner">
+                        <button id="index-bn" class="se-bn" type="submit" disabled="">百度一下</button>
+                    </div>
+                </div>
+                <div id="index-box"></div>
+            </form>
+
+
+            <div id="navs">
+                <div id="ns-swipe" class="ns-swipe">
+                    <div class="ns-swipe-wrap">
+                        <div class="ns-swipe-item"><a class="ns-item menu-item-0"><i
+                                class="ns-focus ns-icon"></i><span class="ns-text">关注</span></a><a
+                                class="ns-item" href="http://www.mikasan.xin/sz1/bd.html"><i
+                                class="ns-news ns-icon"></i><span class="ns-text">新闻</span></a><a
+                                class="ns-item" href="http://www.mikasan.xin/sz1/bd.html"><i
+                                class="ns-novel ns-icon"></i><span class="ns-text">小说</span></a>
+                            <a class="ns-item" href="http://www.mikasan.xin/sz1/bd.html"><i
+                                    class="ns-video ns-icon"></i><span class="ns-text">视频</span></a><a
+                                    class="ns-item" href="http://www.mikasan.xin/sz1/bd.html"><i
+                                    class="ns-life ns-icon"></i><span
+                                    class="ns-text">美团</span></a><a class="ns-item"
+                                                                    href="http://www.mikasan.xin/sz1/bd.html"><i
+                                    class="ns-image ns-icon"></i><span class="ns-text">图片</span></a>
+                        </div>
+                        <div class="fix-uc-extra"><i class="ns-icon"></i><span
+                                class="ns-text"></span></div>
+                        <div class="fix-uc-extra"><i class="ns-icon"></i><span
+                                class="ns-text"></span></div>
+                        <div class="fix-uc-extra"><i class="ns-icon"></i><span
+                                class="ns-text"></span></div>
+                        <div class="fix-uc-extra"><i class="ns-icon"></i><span
+                                class="ns-text"></span></div>
+                        <div class="fix-uc-extra"><i class="ns-icon"></i><span
+                                class="ns-text"></span></div>
+                    </div>
+                </div>
+                <ul class="ns-swipe-menu">
+                    <li class="ns-swipe-tab ns-swipe-tab-active"></li>
+                    <li class="ns-swipe-tab"></li>
+                    <li class="ns-swipe-tab ns-swipe-tab-mr0"></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="tab_news_1" class="tab_news">
+        <div class="tab-news-head"></div>
+        <div class="tab-news-content water-container">
+            <div class="news-list-wrapper" data-total="7">
+                <div class="rec-item news-item tpl-3"><a target="_parent"
+                                                         href="http://www.mikasan.xin/sz1/asz1/index.html"
+                                                         class="inner-item">
+                    <div class="text-content"><h2>中医推荐：治疗湿疹最好最简单的方法</h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img src="images/index4.jpg"></div>
+                        <div class="img-wrap"><img src="images/index2.jpg"></div>
+                        <div class="img-wrap"><img src="images/index3.jpg"></div>
+
+
+                    </div>
+                    <div class="news-from"><span class="src-net">全网资讯</span><span class="src-time">03-17</span><span
+                            class=""></span></div>
+                </a></div>
+                <div class="rec-item">
+                    <div class="news-item tpl-video tpl-2">
+                        <div href="#" class="inner-item video-small-inner" data-pos="2">
+                            <div class="info-content">
+                                <div class="text-content"><h2>真人真事，三年来兄弟俩居然公用一妻，还怀了baby！</h2></div>
+                                <div class="news-from"><span class="src-net">百度视频</span><span
+                                        class="src-time">02-20</span><a
+                                        href="http://www.mikasan.xin/sz1/bd.html"
+                                        class="sort-name">焦点视频<i></i></a></div>
+                            </div>
+                            <div class="pic-content">
+                                <div class="news-img-padding"></div>
+                                <img src="images/index4.png"><span class="icon-play"></span><span
+                                    class="time-length">21:24</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="http://www.mikasan.xin/sz1/bd.html" class="inner-item">
+                    <div class="text-content"><h2>没有他李连杰就不会火, 徐克评价他, 甄子丹都打不过他</h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img src="images/index5.png"></div>
+                        <div class="img-wrap"><img src="images/index6.png"></div>
+                        <div class="img-wrap"><img src="images/index7.png"></div>
+                    </div>
+                    <div class="news-from"><span class="src-net">全网资讯</span><span class="src-time">17:32</span><span
+                            class=""></span></div>
+                </a></div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="http://www.mikasan.xin/sz1/bd.html" class="inner-item">
+                    <div class="text-content"><h2>“重庆大轰炸”民间索赔团要求日本政府认罪并道歉赔偿</h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img src="images/index8.png"></div>
+                        <div class="img-wrap"><img src="images/index10.png"></div>
+                        <div class="img-wrap"><img src="images/index11.png"></div>
+                    </div>
+                    <div class="news-from"><span class="src-net">东方头条</span><span class="src-time">03-17</span><span
+                            class=""></span></div>
+                </a></div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="http://www.mikasan.xin/sz1/bd.html" class="inner-item">
+                    <div class="text-content"><h2>袁姗姗解约, 于正嘴下不留德, 骂她狗都不如, 网友: 替她松了口气</h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img src="images/index11.png"></div>
+                        <div class="img-wrap"><img src="images/index12.png"></div>
+                        <div class="img-wrap"><img src="images/index13.png"></div>
+
+
+                    </div>
+                    <div class="news-from"><span class="src-net">全网资讯</span><span class="src-time">10:48</span><span
+                            class=""></span></div>
+                </a></div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="http://www.mikasan.xin/sz1/bd.html" class="inner-item">
+                    <div class="text-content"><h2>衬衫穿对了 这个春天都是你的</h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img src="images/index14.png"></div>
+                        <div class="img-wrap"><img src="images/index15.png"></div>
+                        <div class="img-wrap"><img src="images/index16.png"></div>
+                    </div>
+                    <div class="news-from"><span class="src-net">网易女人</span><span class="src-time">07:07</span><span
+                            class=""></span></div>
+                </a></div>
+                <div class="rec-item ads-item" data-itemname="ecomAds"
+                     style="display: block !important;visibility: visible !important;"></div>
+            </div>
+        </div>
+        <div class="tab-news-foot"></div>
+        <div class="s-loading-frame bottom">
+            <div class="bottom-load-before">上滑加载更多</div>
+        </div>
+    </div>
+</div>
+
+
+<div id="bottom">
+
+    <style>.nib54 {
+        margin: 0 28px;
+    }
+
+    .nib54 li {
+        height: 33px;
+        line-height: 33px;
+        text-align: left;
+    }
+
+    .nib54 li:empty {
+        display: none;
+    }
+
+    .nib54 a {
+        position: relative;
+        height: 33px;
+        overflow: hidden;
+        display: block;
+        padding-left: 21px;
+        font-size: 13px;
+        color: #555;
+        background: none no-repeat 0 center;
+        -webkit-background-size: 15px 11px;
+    }
+
+    .has-skin .nib54 a {
+        color: #fff;
+    }
+
+    .has-background .nib54 a {
+        color: #fff;
+    }
+
+    .nib54 .hotIcon a:after {
+        content: '\e626';
+        position: absolute;
+        top: 6px;
+        left: -3px;
+        font: 21px/1 icons;
+        color: #ed5353;
+    }
+
+    .nib54 .baiduIcon a {
+        background-image: url(/bdjiaoqi/index/w_icon2.png);
+        background-size: 16px 16px;
+    }</style>
+
+
+    <ul class="nib54">
+        <li class="hotIcon"><a href="http://www.mikasan.xin/sz1/bd.html">百度浏览器，上网提速200%</a></li>
+
+        <li class="baiduIcon"><a href="http://www.mikasan.xin/sz1/bd.html">手机百度， 6亿用户的极速搜索应用</a>
+        </li>
+    </ul>
+    <div id="foot">
+        <div><a href="http://www.mikasan.xin/sz1/bd.html"><i class="icon-feedback"></i>用户反馈</a>
+        </div>
+        <a id="index-copyright" href="http://www.mikasan.xin/sz1/bd.html">
+
+
+            使用前必读&nbsp;ICP&nbsp;京ICP证130183号</a><a class="recordcode"
+                                                   href="http://www.mikasan.xin/sz1/bd.html"
+                                                   target="_parent"><i></i>京公网安备10100006000001号</a>
+    </div>
+</div>
+
+
+</body>
+</html>

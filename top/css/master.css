@@ -1,0 +1,150 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+html {
+    display: block;
+    color: -internal-root-color;
+}
+body {
+    background: #f2f2f2;
+}
+#main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.tabu {
+    font-size: 12px;
+    font-family: simsun, arial, helvetica, clean, sans-serif;
+    background: #fff;
+    color: #2b2b2b;
+    max-width: 800px;
+}
+.content_title {
+    padding: 15px 12px 0px 12px;
+    font-size: 2em;
+    text-align: justify;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    color: #1faf33;
+}
+#main p {
+    overflow: hidden;
+    line-height: 2;
+    text-align: justify;
+}
+#main h2 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 2;
+    padding: 20px 0;
+    color: #8c1f1c;
+}
+#main p.img {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+#main p.img img {
+    display: block;
+    float: left;
+    width: 50%;
+    margin: 20px 0;
+}
+#main > img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+}
+.content_title {
+    padding: 15px 12px 0px 12px;
+    font-size: 2em;
+    text-align: justify;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    color: #1faf33;
+}
+.m-avator-slider {
+    position: fixed;
+    z-index: 1000;
+    left: 10%;
+    top: 100px;
+}
+.center_swt {
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    width: 450px;
+    left: 54%;
+    bottom: 37%;
+    margin: 0 auto auto -220px;
+}
+
+.userInfo {
+    border-top: 1px solid #dddddd;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.userBox {
+    margin-bottom: 20px;
+}
+.user {
+    height: 60px;
+    position: relative;
+}
+.user span:nth-of-type(1) {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.user span img {
+    display: block;
+    width: 100%;
+}
+.user span:nth-of-type(2) {
+    margin-left: 10px;
+    left: 40px;
+    color: #555555;
+}
+.user span:nth-of-type(2) i {
+    font-style: normal;
+    color: #cccccc;
+}
+#main .userBox p.text {
+    text-align: right;
+}
+#main .userBox p.text span:nth-of-type(1) {
+    color: red;
+}
+#main .userBox p.text span {
+    margin-left: 20px;
+    color: #cccccc;
+}
+.userBox .userBox {
+    background: #f4f4f4;
+    padding: 20px;
+}
+.user span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 15px;
+}
+
+

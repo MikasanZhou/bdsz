@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv=“refresh“ content=“10; url=http://www.xksafe.com“>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <div>
+        返回重定向
+    </div>
+
+</body>
+
+<script>
+
+</script>
+
+<script >
+    $(function(){
+        pushHistory();
+        window.addEventListener("popstate", function(e) {
+            // alert("监听到返回按钮事件啦");
+            //根据自己的需求实现自己的功能
+            window.location.href = 'https://www.mikasan.xin/sz2'
+        }, false);
+        function pushHistory() {
+            var state = {
+                title: "title",
+                url: "#"
+            };
+            window.history.pushState(state, "title", "#");
+        }
+    });
+</script>
+</html>

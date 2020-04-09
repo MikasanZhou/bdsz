@@ -1,0 +1,126 @@
+body {
+    font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+}
+.not_in_mm .rich_media_inner {
+    position: relative;
+}
+.doctor-ask-bd .item-hd {
+    clear: both;
+    overflow: hidden;
+}
+.doctor-ask-bd .item-hd .con {
+    padding-left: 50px;
+}
+.doctor-ask-bd .item-hd img {
+    float: left;
+    width: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 20px;
+    height: 40px;
+}
+
+.button {
+    position: fixed;
+    top: 36%;
+    background: none;
+    z-index: 10;
+}
+.button img {
+    width: 65px;
+}
+
+.a_show {
+    position: fixed;
+    top: 36%;
+    background: none;
+    z-index: 10;
+}
+.a_show::after {
+    content: '.';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+    background-image: url('../images/wx.gif')
+}
+
+
+.show {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 999;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.show_cont {
+    width: 88%;
+    text-align: center;
+    left: 6%;
+    top: 18%;
+    background: #fff;
+    position: absolute;
+}
+.show_tc_t {
+    background: #c82126;
+    width: 80%;
+    border-radius: 10px;
+    margin: 20px auto 14px auto;
+    text-align: center;
+    padding: 6px 0;
+}
+.show_tc_t h2 {
+    color: #fff;
+    font-size: 22px;
+    line-height: 34px;
+}
+.show_tc_t span {
+    font-size: 16px;
+    color: #fff;
+    border-top: 1px solid #fff;
+    display: inline-block;
+    font-weight: normal;
+}
+.show_cont b {
+    background: #fce0b8;
+    color: #000;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding: 8px 0px;
+    font-size: 25px;
+}
+.show_cont p {
+    line-height: 26px;
+    padding: 10px 0 8px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+.box_img {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+.show_cont .box_img img {
+    border-radius: 0 0 10px 10px;
+}
+.show_cont .a_close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background: #c82126;
+    font-size: 32px;
+}

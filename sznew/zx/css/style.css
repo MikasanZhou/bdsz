@@ -1,0 +1,186 @@
+*{margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;}
+#LRdiv0,#LRfloater0{display:none}
+#LRdiv1,#LXB_CONTAINER_SHOW,#LRfloater0{display:none !important;}
+html{background:#f5f5f5;}
+body{max-width:640px;margin:0 auto;font-family:"微软雅黑";font-size:14px;background:#ebebeb}
+a{text-decoration:none;}
+.ly-header{position:fixed;top:0;z-index:10;width:100%;max-width:640px;}
+.ly-header nav{height:40px;background:#393a3f;}
+.ly-header nav a:nth-child(1){float:left;width:50px;height:40px;background:url(../images/wechat.png) no-repeat scroll 20px 12px;}
+.ly-header nav a i{float:right;width:1px;height:20px;margin:10px 0 0 0;background:#2e2e32}
+.ly-header nav h2{color:#FFF;font-size:16px;line-height:40px;text-indent:10px;}
+.ly-header nav a:nth-child(2){float:right;width:50px;height:40px;background:url(../images/wechat.png) no-repeat scroll 14px -42px;}
+.ly-section1{min-height:100%;padding:40px 0 0 0;background:#ebebeb}
+.ly-section1 .line{margin:0 10px 0 10px;}
+.ly-section1 .left{float:left;max-width:80%;margin:10px 0 0 0;}
+.ly-section1 .left div{position:relative;margin:0 0 0 55px;padding:10px;background:#FFF;color:#323232;border:1px solid #d5d5d5; border-radius:6px;}
+.ly-section1 .left div i{position:absolute;top:12px;left:-20px;width:20px;height:20px;background:url(../images/wechat.png) no-repeat scroll 0 -200px;transform:rotate(-180deg)}
+.ly-section1 .left img{float:left;margin:0 5px 0 0;}
+.ly-section1 .left div img{float:none;}
+.ly-section1 figure{ width:95%;margin:80px auto 0;overflow:hidden;padding:15px 0;border-bottom:1px solid #CCCCCC;}
+.ly-section1 .zzh{ width:100%; float:left; display:block; }
+.ly-section1 figcaption{ width:68%; float:left; margin-left:2%;}
+.ly-footer{position:fixed;bottom:0;width:100%;max-width:640px;height:50px;background:#FFF;border-top:1px solid #bfbfbf}
+.ly-footer div{width:100%;}
+.ly-footer div:nth-child(1){max-width:50px;}
+.ly-footer div:nth-child(1){max-width:50px;}
+.ly-footer div:nth-child(3){max-width:50px;}
+.ly-footer div:nth-child(1) a{float:left;width:50px;height:50px;background:url(../images/wechat.png) no-repeat scroll 9px -89px;}
+.ly-footer div:nth-child(2) textarea{width:80%;height:36px;margin:7px 0 0 0px;color:#000;font-size:18px;line-height:35px;border:none;border-bottom:1px solid #d8d8d8;transition:0.3s;resize:none;overflow-y:auto;outline:none;}
+.ly-footer div:nth-child(2) textarea:focus{border:none;border-bottom:1px solid #45c01a;}
+.ly-footer div:nth-child(2) textarea.on{border-bottom:#45c01a}
+.ly-footer div:nth-child(2) i{}
+.ly-footer div:nth-child(3) a{position:absolute;top:0;right:0;width:65px;height:35px;margin:7px 5px 0 0;background:#45c01a;color:#FFF;text-align:center;line-height:35px;border-radius:5px;cursor:pointer;transition:0.3s;}
+.ly-footer div:nth-child(3) a:hover{background-color:#3aa814;}
+.ly-footer div button{position:absolute;top:0;right:0;width:65px;height:35px;margin:7px 5px 0 0;background:#45c01a;color:#FFF;text-align:center;font-size:16px;line-height:35px;border-radius:5px;cursor:pointer;transition:0.3s;border:none;}
+
+.ly-clear{clear:both;}
+.ly-hide{display:none;}
+.ly-animation-bell{display:inline-block;color:#F00;transition:0.5s;}
+.ly-animation-bell.on{animation:ly-animation-bell 0.5s;}
+.talk {padding:0 0 60px 0;}
+.talk .right{float:right;max-width:80%;margin:10px 0 0 0;}
+.talk .right img{float:right;margin:0 0 0 5px;}
+.talk .right div{position:relative;min-height:41px;margin:0 55px 0 0;padding:10px;background:#FFF;color:#323232;border:1px solid #d5d5d5; border-radius:6px;}
+.talk .right div i{position:absolute;top:15px;right:-20px;width:20px;height:20px;background:url(../images/wechat.png) no-repeat scroll 0 -200px;}
+
+@keyframes ly-animation-bell{
+    0%{transform:rotate(-5deg);}
+    20%{transform:rotate(10deg);}
+    40%{transform:rotate(-15deg);}
+    60%{transform:rotate(20deg);}
+    80%{transform:rotate(-15deg);}
+    100%{transform:rotate(10deg);}
+}
+
+
+.we1 {
+    background: #e50150 none repeat scroll 0 0;
+    color: #ffffff;
+    float: left;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    padding-top: 0;
+    position: relative;
+    text-align: center;
+}
+
+.wechat {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    color: #666;
+    display: none;
+    left: 10%;
+    padding: 30px 0;
+    position: fixed;
+    right: 10%;
+    text-align: center;
+    top: 20%;
+    width: 80%;
+    z-index: 5000;
+}
+.zmtWechat { bottom: 0; height: 40px; max-width: 740px; position: fixed; width: 100%;}
+.wechatIcon { vertical-align: middle; width: 30px;}
+.we1 {  background: #e50150; color: #ffffff; float: left; font-size: 18px; height: 50px; line-height: 50px; overflow: hidden; padding-top: 0; position: relative;  text-align:center;}
+.we1 a {  color: #ffffff; text-decoration: none;}
+.we2 { background: #302825 ; color: #ffffff; float: left; font-size: 18px;  height: 50px; line-height: 50px; padding-top: 0;  width: 60%; text-align:center;}
+.zmtWechat { bottom: 0; height: 50px; position: fixed; width: 100%;}
+.xx {  vertical-align: middle; width: 240px;}
+.wechatBox { display: none;  height: 100%; position: fixed;  top: 0; width: 100%; z-index: 5;}
+.wechatimg {  background: #fff; border-radius: 20px; box-shadow: 1px 1px 2px rgba(0, 0, 0, 1); color: #666; display: none; left: 10%; position: fixed; right: 10%; text-align: center; top: 20%; width: 80%; z-index: 5000;}
+.wechatimg img { width: 100%;}
+.wechat .p1 { font-size: 16px;}
+.wechat .p2 {  font-size: 23px;}
+.wechat .wxid {  background-color: #f62796; color: #fff; font-size: 40px;  margin: 30px 0; padding: 10px;}
+.wxid {
+    background-color: #f62796;
+    color: #fff;
+    font-size: 40px;
+    margin: 30px 0;
+    padding: 10px;
+}
+
+
+#flow_wx {
+	font-size:.8em;
+	position:fixed;
+	right:0.5em;
+	top:40%;
+}
+#flow_wx #wx_icon {
+	width:5em;
+	height:5em;
+	background:url(../images/wx_icon.html) no-repeat 0 0;
+	background-size:18em;
+	
+}
+#flow_wx #wx_copy {
+	width:18em;
+	height:12em;
+	background:url(../images/wx_icon.html) no-repeat 0 -5.8em;
+	background-size:22em;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-left:-9em;
+	margin-top:-5em;
+	text-align:center;
+	padding:3em 0 0;
+	box-sizing:border-box;
+	overflow:hidden;
+	display:none;
+}
+#flow_wx #wx_copy span {
+	font-size:1.4em;
+	color:#fff;
+	background:#086116;
+	padding:0 0.2em 0.1em;
+}
+#flow_wx #wx_copy em {
+	font-size:1em;
+	line-height:1em;
+	color:#666;
+	margin:0.8em 0;
+	display:inline-block;
+}
+#flow_wx #wx_copy i {
+	width:1.5em;
+	height:1.5em;
+	background:url(../images/wx_icon.html) no-repeat -9.2em 0;
+	background-size:22em;
+	display:inline-block;
+	vertical-align:middle;
+}
+#flow_wx #wx_copy b {
+	font-size:0.8em;
+	color:#9d9d9d;
+	margin-left:0.5em;
+}
+#flow_wx #wx_copy p {
+	position:absolute;
+	right:1.5em;
+	top:1em;
+	width:2em;
+	height:2em;
+}
+.umus {
+    display: block;
+    position: absolute;
+    right: 8px;
+    text-align: center;
+    top: 6px;
+}
+
+.umus a {
+    color: rgb(255, 255, 255);
+    display: block;
+    float: right;
+    height: 20px;
+    margin-left: 1px;
+    overflow: hidden;
+    padding: 7px;
+    width: 24px;
+}

@@ -1,0 +1,121 @@
+/* ::::: http://www.lanyinfang.cn/bnf2/images/style.css ::::: */
+* { margin: 0px; padding: 0px; }
+body { font-size: 10px; font-family: "微软雅黑"; }
+.container { margin: 0px auto; width: 100%; box-sizing: border-box; max-width: 640px; }
+html { text-align: justify; }
+ul li { list-style-type: none; }
+.clear { clear: both; }
+.top {
+	width: 100%;
+	border: 1px solid rgb(204, 204, 204);
+	background:#28b4c3;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-align: center;
+	margin: 0 auto;
+	clip: rect(auto,auto,auto,100px);
+   }
+.header {
+    background: #FDFDFD none repeat scroll 0 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 8px 5px 8px;
+}
+.User_askcon {border:1px solid #02879f;padding:20px;clear:both;margin-bottom:10px;margin:5px;position:relative}
+.user-icon {width:25px;height:31px;background:url("wen.html"/*tpa=http://a.msxiaoyaojun.com/changyan/c5/css/wen.png*/) no-repeat;position:absolute;top:-5px;left:-8px;background-size:100%}
+.User_askcon .item-hd .t1 {display:inline-block;color: #fff;padding:3px 8px;background: #3ebcd5;font-size:12px}
+.User_askcon .item-hd .t2 {font-weight:bold;padding-left:5px;padding-right:5px;}
+.User_askcon .item-hd .t3 {display:inline-block;color: #fff;padding:1px 5px;background: #f98d00;font-size:12px}
+.User_askcon .item-bd {padding-top:10px;}
+.User_askcon .item-bd span {display:inline-block;position:relative;font-size:12px;color:#999}
+.User_askcon .item-bd span.t1 {padding-right:5px;}
+.User_askcon .item-bd span.t2 {padding:0 5px;border-left:1px solid #ddd;}
+.User_askcon .item-bd span.t3 {border-left:1px solid #ddd;padding-left:20px;background:url("clock.html"/*tpa=http://a.msxiaoyaojun.com/changyan/c5/css/clock.png*/) 5px center no-repeat;}
+.User_askcon .item-con {padding-top:10px;line-height:24px}
+.top .top_img { 
+width: 170px; 
+float: left;}
+.top .top_img2 { 
+ width: 350px; 
+ float: right;
+  }
+.top .top_img3 
+{
+ width: 50px; 
+ float:right; 
+}
+.topTitle { background: rgb(255, 255, 255) none repeat scroll 0% 0%; line-height: 20px; font-size: 12px; padding: 5px 10px;color:#999}
+.lz {  }
+.top .top_img img {
+	width: 100%;
+	border: 1px none rgb(255, 255, 255);
+}
+.top .top_title { width: 100%; line-height: 30px; padding-top: 20px; }
+.top .top_title .span1 { font-size: 22px; display: block; }
+.top .top_title .span2 { background: rgb(255, 114, 119) none repeat scroll 0% 0%; font-size: 10px; color: rgb(255, 255, 255); padding: 4px; border-radius: 5px; margin-left: 10px; }
+.top .top_title .span3 { color: rgb(204, 204, 204); }
+.top .top_title .span3_1 { color: red; }
+.top .top_title .span4 { color: rgb(204, 204, 204); }
+.top .top_title .span4_1 { color: red; }
+.h01 { margin-bottom: 1px; }
+.main { box-sizing: border-box; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 1px solid rgb(204, 204, 204); position:relative;margin:5px;}
+.main-icon {width:25px;height:31px;background:url("da.html"/*tpa=http://a.msxiaoyaojun.com/changyan/c5/css/da.png*/) no-repeat;position:absolute;top:-5px;left:-8px;background-size:100%}
+.main .title { padding: 6px 10px; border-bottom: 1px solid rgb(187, 189, 191); line-height: 25px; font-size: 16px; font-weight: bold; }
+.main1 { background: rgb(250, 251, 252) none repeat scroll 0% 0%; border-bottom: 1px solid rgb(225, 228, 230); width: 100%; float: left; }
+.main1 .left { background: rgb(250, 251, 252) none repeat scroll 0% 0%; float: left; text-align: center; width: 20%; padding: 20px 10px 0px; box-sizing: border-box; }
+.main1 .left span { font-size: 12px; color: rgb(45, 100, 179); white-space: nowrap; display: block; }
+.main1 .left img { width: 46px; height: 46px; }
+.main1 .right { background: rgb(255, 255, 255) none repeat scroll 0% 0%; float: left; padding: 0px 10px 5px; position: relative; width: 80%; box-sizing: border-box; }
+.main1 .right .right_m { padding: 20px 0px 0px; text-indent: 2em; line-height: 25px; min-height: 84px; }
+.main1 .right .right_m span {}
+.main1 .right .right_reply { margin-right: 13px; }
+.right_reply .right_reply_l { line-height: 28px; }
+.right_reply .right_reply_l .right_reply_l_r { float: right; margin-left: 4px; background: rgb(247, 248, 250) none repeat scroll 0% 0%; color: rgb(45, 100, 179); font-size: 12px; }
+.right_reply .right_reply_l .right_reply_l_l { float: right; color: rgb(153, 153, 153); position: relative; }
+.right_reply .right_reply_l .right_reply_l_l span { color: rgb(153, 153, 153); line-height: 28px; font-size: 12px; }
+.right_reply .right_reply_l .right_reply_l_l span a { color: rgb(45, 100, 179); }
+.right_reply .right_reply_m { background: rgb(247, 248, 250) none repeat scroll 0% 0%; margin-top: -1px; width: 100%; }
+.right_reply .right_reply_m .right_reply_m_m { padding: 4px 8px 14px; float: left; background: rgb(247, 248, 250) none repeat scroll 0% 0%; border-top: 1px solid rgb(204, 204, 204); width: 100%; }
+.right_reply_m_m ul li { padding-top: 10px; float: left; width: 100%; }
+.right_reply_m_m ul .lz {  }
+.right_reply_m_m .img { float: left;padding:0; text-align:left;max-width:640px; margin:0; }
+.right_reply_m_m .img img { width: 32px; height: 32px; border: 1px solid rgb(255, 255, 255); }
+.right_reply_m_m .cont { width: 78%; float: left; line-height: 22px; margin-left: 10px; }
+.right_reply_m_m .cont a { float: left; color: rgb(45, 100, 179); font-size: 12px; }
+.right_reply_m_m .cont_m span { color: red; font-weight: bold; }
+.right_reply_m_m .cont .cont_m { font-size: 14px; }
+.footerss { text-align: left; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; }
+.footerss p { color: rgb(44, 118, 209); }
+.menu { width: 100%; padding: 10px 10px 6px; box-sizing: border-box; overflow: hidden; }
+.menu ul li { float: left; text-align: center; border: 1px solid rgb(204, 204, 204); cursor: pointer; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 5px; margin: 0px 4px 8px; font-weight: bold; width: 20%; }
+.menu ul li a { text-decoration: none; color: rgb(45, 100, 179); display: inline-block; width: 100%; }
+.menu .off a { color: rgb(204, 204, 204); }
+.fr{float:right !important;display:inline;}
+fr.user{padding:25px 25px 25px;height:30px;overflow:hidden;line-height:normal;color:#999;line-height:30px;
+padding-top:5px; padding-right:10px}
+.cont_pic {width:100%;clear:both;margin-top:10px;}
+.cont_pic img {width:50px;border:1px solid #ddd;padding:1px;display:inline-block;margin-right:1px}
+.cont_pic img:last-child {margin-right:0}
+.doctor-ask { box-sizing: border-box; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 1px solid rgb(204, 204, 204); position:relative;margin:5px;}
+.doctor-ask-hd {padding:10px 20px;position:relative}
+.doctor-ask-hd .t1 {font-size:16px;font-weight:bold}
+.doctor-ask-hd .t2 {float:right;font-size:12px;color:#999}
+.doctor-ask-bd .item {padding:10px;}
+.doctor-ask-bd .item-hd {clear:both;overflow:hidden}
+.doctor-ask-bd .item-hd img {float:left;width:40px;height:40px;float:left}
+.doctor-ask-bd .item-hd .con {padding-left:50px;}
+.doctor-ask-bd .item-hd .con strong {color:#02879f}
+.doctor-ask-bd .item-hd .con span {display:block;font-size:12px;color:#999;padding-top:5px;}
+.doctor-ask-bd .item-bd {clear:both;padding:10px;background-color:#f2f2f2;font-size:14px;line-height:24px;color:#666;margin-top:10px;overflow:hidden}
+.doctor-ask-bd .item-date {text-align:right;}
+.doctor-ask-bd .item-date span {font-size:12px;color:#999;padding-left:20px;background:url("clock.html"/*tpa=http://a.msxiaoyaojun.com/changyan/c5/css/clock.png*/) 5px center no-repeat;}
+.doctor-ask-bd .item-zan {padding-top:10px;} 
+.doctor-ask-bd .item-zan span {color:#02879f;display:inline-block;background:url("zan.html"/*tpa=http://a.msxiaoyaojun.com/changyan/c5/css/zan.png*/) no-repeat 5px center; padding-left: 25px;height: 27px;line-height:27px; border:1px solid #ccc;border-radius:5px;backgroud-color:#fff;}
+.doctor-ask-bd .item-zan span i {font-style:normal;color:#ff6600;font-size:14px}
+.flashing{ animation: change 1s  ease-in  infinite ;color:#f00;}
+        @keyframes change {
+            0%{ text-shadow: 0 0 4px #f00}
+            50%{ text-shadow: 0 0 40px #f00}
+            100%{ text-shadow: 0 0 4px #f00}
+        }

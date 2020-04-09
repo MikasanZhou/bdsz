@@ -1,0 +1,181 @@
+.i-content{
+    overflow: hidden;
+    background-color: #fff;
+}
+.wrap{
+    margin: 0.1rem 0;
+    padding:0.1rem;
+    font-size: .7rem;
+    line-height: 1.2rem;
+}
+.wrap img{
+    margin: 0.7rem 0;
+}
+.center{
+	margin-top:20px;
+    text-align: center;
+}
+.red{
+    color: red
+}
+.big-t{
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: normal;
+    background-color: #bba56a;
+}
+.tag-1{
+    color: #bba56a;
+    font-size: 1.32rem;
+    font-weight: bold;
+}
+.box-1{
+    position: relative;
+    padding: 8px 10px;
+    margin: 1rem 0;
+}
+.box-1:before{
+    position: absolute;
+    content: "";
+    width: 1.5rem;
+    height: 1.8rem;
+    top: 0;
+    left: 0;
+    border-top: 4px solid #bba56a;
+    border-left: 4px solid #bba56a;
+}
+.box-1:after{
+    position: absolute;
+    content: "";
+    width: 1.5rem;
+    height: 1.8rem;
+    right: 0;
+    bottom: 0;
+    border-bottom: 4px solid #bba56a;
+    border-right: 4px solid #bba56a;
+}
+.title-1{
+    padding-left: .7rem;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: bold;
+    background-color: #bba56a;
+}
+.tag-2{
+    margin-top: 1rem;
+    font-size: .9rem;
+    font-weight: bold;
+}
+.bg-y{
+    color: #fff;
+    font-size: .7rem;
+    background-color: #bba56a;
+}
+.wrap .wx-num,footer .wx-num{
+    font-weight: bold;
+    color: yellow;
+    background-color: red;
+}
+#comment .wx-num{
+    background:none;
+}
+
+
+ul li {
+    list-style-type: none
+}
+
+.change #case .first li:hover {
+    background: #aa8c3a;
+}
+
+.change .first li.on {
+    background: #aa8c3a !important;
+}
+
+
+.change #case .first li {
+    background: #dfb850;
+}
+
+.content .menu li.on {
+    border-bottom-color: #c1900e;
+}
+
+.change .first #submit_btn {
+    background: #dfb850;
+}
+
+#comment .user_Info img {
+    width: 12%;
+    border-radius: 50%;
+}
+.Mask_txt {
+position: absolute;
+top: 5rem;
+font-size: .7rem;
+padding: .6rem;
+}
+
+#Mask .close_Mask {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+}
+
+.qq_Mask .Mask_txt {
+    position: absolute;
+    top: 6rem;
+    font-size: .7rem;
+    padding: .6rem;
+}
+
+.qq_Mask .close_Mask {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+}
+.Mask_wechat {
+    background: #2d02e5;
+}
+footer{
+    position: fixed;
+    z-index: 90;
+    bottom: 0;
+    padding: .5rem 4px;
+    width: 100%;
+    max-width: 640px;
+    font-size: .8rem;
+    background: #eee;
+    border-top: 1px solid #ccc;
+}
+.go{
+    float: right;
+    margin-right: .7rem;
+    color: #fff;
+    padding: .2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #539b01;
+}
+
+
+.wxboox{
+    color:#ff7e28;font-size: 0.8rem;text-align: center;margin:10px 0;
+}
+.wxboox .wx{
+    display: inline-block;width:500px;background:#ff7e28;color:#fff;max-width:80%;margin:10px 0;border-radius: 10px;
+}
+.big-b{
+    font-size: 1.8rem;line-height: 2.2rem;color:#bba56a;
+}
+.wx-num{
+    font-size: 130%;
+}

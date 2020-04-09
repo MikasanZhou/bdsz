@@ -1,0 +1,42 @@
+@charset "gb2312";
+body, div, p, table, tr, th, td, form, input, textarea, fieldset, blockquote, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd {
+	margin: 0;
+	padding: 0
+}
+body {
+	font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+}
+ul, ol, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+i, p {
+	font-style: normal;
+}
+img {
+	border: none;
+}
+input {
+	vertical-align: middle
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.jiapl{width:98%;height:auto; overflow:hidden;margin:0 auto; border:1px solid #ccc;}
+.jiapl .toppl{ text-align:center;font-size:14px;color:#555; font-weight:bold; line-height:30px; background-color:#F9F9F9}
+.jiapl ul table{width:100%;}
+.jiapl li{border-top:1px solid #ccc;padding:8px;height:auto; overflow:hidden;}
+.jiapl .ds-left{ float:left;width:50px;}
+.jiapl .ds-left a{border:1px solid #ccc;width:50px;height:50px; display:inline-block; line-height:50px; text-align:center; background-color:#e6e6e6;color:#555;margin-top:20px;}
+.jiapl .ds-left img{border-radius:3px;width:50px;height:50px;}
+.jiapl .ds-right{padding-left:62px;}
+.jiapl hr{width:100%;margin:30px auto;border:1px solid #ccc;}
+.jiapl .ds-right .dsp1{ color: #777;font-size: 13px;}
+.jiapl .ds-right .dsp2{font-size: 13px;line-height:22px;margin:3px 0px;overflow-wrap:break-word;color:#333;}
+.jiapl .ds-right .dsp3{color:#999;font-size:12px;}
+.jiapl .ds-right .dsp3 span{margin-right:5px; display:inline-block;}
+.jiapl .ds-right textarea{width:99%;padding:5px;border:1px solid #ccc;margin-top:20px;}

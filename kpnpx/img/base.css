@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* 预格式化 */
+html{
+	font: 100px Helvetica, Arial, sans-serif;
+	background: #FBF8EF;
+	overflow-x: hidden;
+}
+body,ul{
+
+	margin: 0;
+	padding: 0;
+}
+img{
+	border: 0;
+	vertical-align: top;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+hr{
+	margin: .1rem auto;
+	border: .005rem dashed #ccc;
+}
+.clearfix:after{
+	display: block;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	overflow: hidden;
+	clear: both;
+	content: ""
+}
+
+/* header */
+.header{
+	width: 100%;
+	background: #fff;
+}
+.company{
+	font-size: 0.12rem;
+	color: #eee;
+	text-align: center;
+	padding: .02rem;
+}

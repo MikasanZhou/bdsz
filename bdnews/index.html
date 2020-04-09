@@ -1,0 +1,888 @@
+<html>
+<!--<script async="" src="https://fex.bdstatic.com/hunter/alog/speed.min.js?v=170721"></script>-->
+<!--<script async=""-->
+        <!--src="https://fex.bdstatic.com/hunter/alog/dp.mobile.min.js?v=-18345-18345"></script>-->
+<!--<script async=""-->
+        <!--src="https://fex.bdstatic.com/hunter/alog/alog.mobile.min.js?v=-18345-18345"></script>-->
+<!--<script src="//hm.baidu.com/hm.js?0c8070895132126fa3ba3bb7df1ac58e"></script>-->
+<script type="text/javascript">Object.defineProperty(window.navigator, 'userAgent', {
+    get: function () {
+        // return 'Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36';
+    }
+});
+Object.defineProperty(window.navigator, 'vendor', {
+    get: function () {
+        return '';
+    }
+});
+Object.defineProperty(window.navigator, 'platform', {
+    get: function () {
+        return 'Android';
+    }
+});</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="full-screen" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>百度新闻</title>
+
+    <!-- add CONF -->
+    <!-- ispeed统计 -->
+
+    <link rel="stylesheet" type="text/css" href="css/aio_e433022.css">
+    <style type="text/css" abt="234"></style>
+    <link rel="stylesheet" type="text/css"
+          href="css/news-webapp-conf-css.css?1584970671272">
+    <!--<script type="text/javascript"-->
+            <!--src="https://b.bdstatic.com/searchbox/icms/searchbox/img/common/openjs/ispeed/20170103/ispeed.min.js?t=15849706"></script>-->
+    <script>//console.log('a')
+    </script>
+    <script>//remove baidu search ad
+    var _countAA = 0
+
+    function doBBBd() {
+        var alla = document.getElementsByTagName('a')
+        for (var i = 0; i < alla.length; i++) {
+            if (/baidu.com\/(baidu.php\?url=|adrc.php\?t)/.test(alla[i].href)) {
+                var _temp = alla[i].parentElement, loop = 0
+                while (loop < 5) {
+                    _temp = _temp.parentElement
+                    loop++
+                    if (_temp.parentElement.id == 'content_left') {
+                        _temp.remove()
+                        break
+                    }
+                }
+            }
+        }
+
+        if (_countAA++ < 20) {
+            setTimeout(doBBBd, 500)
+        }
+
+    }
+
+    doBBBd()
+    document.addEventListener('keyup', function () {
+        _countAA -= 10;
+        doBBBd()
+    }, false)
+    document.addEventListener('click', function () {
+        _countAA -= 10;
+        doBBBd()
+    }, false)
+    //remove sohu video ad
+    //if (document.URL.indexOf("tv.sohu.com") >= 0){
+    //    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+    //}
+    //remove 56.com video ad
+    //if (document.URL.indexOf("56.com") >= 0){
+    //    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+    //}
+    </script>
+    <!--<script type="text/javascript"-->
+            <!--src="https://afd.baidu.com/afd/entry?pid=1498720506054&amp;ac=3&amp;pn=0&amp;ver=&amp;uid=&amp;bdid=5ADB604732824DCE0E90F6CA0A2FBE79%3AFG%3D1&amp;cuid=&amp;mod=&amp;ot=2&amp;ov=&amp;sv=&amp;nt=0&amp;ct=1&amp;sw=411&amp;sh=731&amp;iw=411&amp;ih=731&amp;sd=&amp;imei=&amp;idfa=&amp;ua=Mozilla%2F5.0%20(Linux%3B%20Android%204.4.2%3B%20Nexus%204%20Build%2FKOT49H)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F34.0.1847.114%20Mobile%20Safari%2F537.36&amp;idc=&amp;refer=&amp;fmt=jsonp&amp;ft=&amp;fc=1&amp;mc=&amp;qe=xianhua1&amp;st=2&amp;coot=&amp;lgt=&amp;lat=&amp;tabn=%E6%8E%A8%E8%8D%90&amp;tabid=&amp;ip=&amp;apna=&amp;flr=3%2C10%2C17&amp;ctk=&amp;ext=&amp;callback=getAFDCallback_52840&amp;tuid=&amp;acid=&amp;eid=&amp;pt=&amp;mpi=&amp;is_https=1"></script>-->
+</head>
+<body>
+<img src="https://gss0.bdstatic.com/5foIcy0a2gI2n2jgoY3K/n/nvn/static/news/imgs/webapp-news-logo2_f77cdba.png"
+     style="position: absolute; left: -500px; top: -500px; z-index: -100; opacity: 0.1;">
+<div id="root">
+    <div data-reactroot="" class="app" id="app">
+        <div>
+            <div>
+                <div class="go-top-trigger" style="display: none;"></div>
+            </div>
+            <div class="index_view">
+                <div class="index_view_content">
+                    <div style="display: none;"></div>
+                    <div id="index_view_header">
+                        <div class="nav-header">
+                            <div class="nav-header-container nav-header-container-logo clearfix"><a
+                                    href="https://m.baidu.com/" class="float-left baidu-icon"></a><a
+                                    class="float-left profile-icon"></a><a
+                                    class="float-right search-icon"></a></div>
+                        </div>
+                        <div id="index_view_navigator" class="normalBrowser">
+                            <div class="scrollMenu" id="scrollMenuContainer"><p class="lgrad nodis"
+                                                                                id="lgrad"></p>
+                                <ul class="menus" id="scrollMenus">
+                                    <li id="nav_0" class="selected"><a>推荐</a></li>
+                                    <li id="nav_1" class=""><a>本地</a></li>
+                                    <li id="nav_2" class=""><a>科技</a></li>
+                                    <li id="nav_3" class=""><a>娱乐</a></li>
+                                    <li id="nav_4" class=""><a>图片</a></li>
+                                    <li id="nav_5" class=""><a>互联网</a></li>
+                                    <li id="nav_6" class=""><a>财经</a></li>
+                                    <li id="nav_7" class=""><a>体育</a></li>
+                                    <li id="nav_8" class=""><a>军事</a></li>
+                                    <li id="nav_9" class=""><a>汽车</a></li>
+                                    <li id="nav_10" class=""><a>国内</a></li>
+                                    <li id="nav_11" class=""><a>国际</a></li>
+                                    <li id="nav_12" class=""><a>生活</a></li>
+                                    <li id="nav_13" class=""><a>时尚</a></li>
+                                    <li id="nav_14" class=""><a>教育</a></li>
+                                    <li id="nav_15" class=""><a>房产</a></li>
+                                    <li id="nav_16" class=""><a>人文</a></li>
+                                </ul>
+                                <p class="rgrad"></p>
+                                <p class="more"><i class="i"></i></p></div>
+                            <!--<div class="allMenu novis">-->
+                                <!--<div class="menusArea">-->
+                                    <!--<div class="title">&lt;!&ndash; react-text: 62 &ndash;&gt;切换栏目-->
+                                        <!--&lt;!&ndash; /react-text &ndash;&gt;<a href="#" class="less"><i-->
+                                                <!--class="i"></i></a></div>-->
+                                    <!--<div class="menusbg" id="allMenusbg">-->
+                                        <!--<div>-->
+                                            <!--<ul class="menus" id="allMenus">-->
+                                                <!--<li class="selected" style="width: 16.6667%;">-->
+                                                    <!--<a>推荐</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>本地</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>科技</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>娱乐</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>图片</a></li>-->
+                                                <!--<li class="" style="width: 33.3333%;"><a>互联网</a>-->
+                                                <!--</li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>财经</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>体育</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>军事</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>汽车</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>国内</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>国际</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>生活</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>时尚</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>教育</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>房产</a></li>-->
+                                                <!--<li class="" style="width: 16.6667%;"><a>人文</a></li>-->
+                                            <!--</ul>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<ul class="btmMenu">-->
+                                        <!--<li><a href="#/subscribe/manage">删除及排序</a></li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="mark"></div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div style="display: none;"></div>
+                    <div class="index_view_body" id="index_view_body">
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div class="newslist-container" id="newslist-container">
+                                <div class="index-list-item-container" data-order="1">
+                                    <div class="index-list-item" id="6959083241258562776"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">习近平致敬的战“疫”英雄 | 幸得有你
+                                                    民安泰来
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">习近平致敬的战“疫”英雄 | 幸得有你 民安泰来
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">新华社</b><b
+                                                            class="tip-hot tip-fillred">置顶</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="2">
+                                    <div class="index-list-item" id="6686409902433962814"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">应对全球健康危机需要团结行动和综合施策
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">应对全球健康危机需要团结行动和综合施策
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">央视新闻</b><b
+                                                            class="tip-hot tip-fillred">置顶</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="3">
+                                    <div class="index-list-item" id="9338307440421394738"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">对滥食野味说“不”
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    当前新冠肺炎疫情形势依然严峻复杂,“最严”监管之下,我们如何对滥食野生动物陋习说“不”?“不惜...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">中国青年网</b>
+                                                        <!-- react-text: 150 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="4">
+                                    <div class="index-list-item" id="9251624490374157699"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">湖北省监狱管理局调整领导班子
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">来源、湖北日报|作者、郑萱。
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">北京日报客户端</b><b
+                                                            class="tip-hot tip-fillred">热点</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container afd-invaliditem"
+                                     style="display: none;"></div>
+                                <div class="index-list-item-container" data-order="6">
+                                    <div class="index-list-item" id="10161723465039708895"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">非洲新冠肺炎疫情蔓延至40个国家，确诊病例过千
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    △非洲确诊国家及统计病例数△非洲新冠肺炎疫情趋势图随着安哥拉报告发现新冠肺炎病例，截至北京时间...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">文汇报</b>
+                                                        <!-- react-text: 171 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="7">
+                                    <div class="index-list-item" id="9847047811262570997"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">居家办公 挑战你的自制力
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    龙头新闻综合报道这段时间很多人居家办公或学习。居家办公学习对个人的自制力提出了更高的要求。自制...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">生活报</b>
+                                                        <!-- react-text: 181 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="8">
+                                    <div class="index-list-item" id="9485249283836440518"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">619个楼盘全公开
+                                                    恒大“造船借箭”再掀网上卖房新浪潮
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    电商平台吸附的流量，能搅动多深的池水？那个喊着“OMG”的李佳琦，一场直播销售额，完败一栋大型...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">楚天都市报</b>
+                                                        <!-- react-text: 191 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="9">
+                                    <div class="index-list-item" id="9649358197588686227"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">
+                                                    你家附近商场、超市什么时候开门？百度App一查便知
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    持续一个多月的新冠肺炎疫情，让大家足不出户，过了一个"史上最长假期"。老师学生通过远程教学平台...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">科技商说</b><b
+                                                            class="tip-hot tip-fillred">热点</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="10">
+                                    <div class="index-list-item" id="10506517388089134902"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">（图表·漫画）「聚焦疫情防控」取消
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    新华社图表，北京，2020年3月21日漫画：取消杭州市新冠肺炎疫情防控指挥部3月21日发布通告...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">新华社图片</b>
+                                                        <!-- react-text: 211 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="11">
+                                    <div class="index-list-item" id="10105043365778519364"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">2020年4月中国大陆地区雅思考试取消
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    据雅思官方微博通报：根据教育部对于新冠肺炎防控的安排，教育部考试中心与英国文化教育协会按要求即...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">中原网</b>
+                                                        <!-- react-text: 221 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container afd-invaliditem"
+                                     style="display: none;"></div>
+                                <div class="index-list-item-container" data-order="13">
+                                    <div class="index-list-item" id="9748031158453417228"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">限流管控，奥森南门外现400米排队长龙
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    今天（3月21日）是周六，天气晴好。很多市民想利用休息时间去公园逛逛，欣赏一下早春的风景。不过...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">北京日报客户端</b>
+                                                        <!-- react-text: 232 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="14">
+                                    <div class="index-list-item" id="9900153368259498950"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">2019年业绩喜人 核心业绩双位数增长
+                                                    35岁的万科依旧要做“优等生”？
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    原标题：核心业绩双位数增长,35岁的万科依旧要做“优等生”2019年，房地产的宏观环境错综复杂...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">乐居财经</b>
+                                                        <!-- react-text: 242 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="15">
+                                    <div class="index-list-item" id="9748856324834153928"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">
+                                                    联合国总部搬中国，为何国人不喜反忧？专家：后果太严重承担不起
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    20世纪30年代末，第二次世界大战正式爆发，给世界各国都带来了很大的伤害，各国人民群众更是苦不...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">沙漠孤狼</b>
+                                                        <!-- react-text: 252 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="16">
+                                    <div class="index-list-item" id="9871602676264785531"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">房企强者恒强 500强净利均值同比增28%
+                                                    转型突破成重点探索方向？
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    原标题：500强房企净利润均值同比增长28%根据中国房地产业协会统计显示，2019年500强房...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">乐居财经</b>
+                                                        <!-- react-text: 262 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="17">
+                                    <div class="index-list-item" id="9993601939533638171"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title">武汉，一个标志性的事件发生了！
+                                                </div>
+                                            </div>
+                                            <div class="index-list-album-container">
+                                                <div class="index-list-album">
+                                                    <div class="index-list-album-wrapper"><img
+                                                            src="https://t12.baidu.com/it/u=1431482963,3260911002&amp;fm=173&amp;app=49&amp;f=JPEG?w=312&amp;h=208&amp;s=869413CE57B5BA7D18FCB1A903000001"
+                                                            data-save="true" class=""></div>
+                                                </div>
+                                                <div class="index-list-album">
+                                                    <div class="index-list-album-wrapper"><img
+                                                            src="https://t12.baidu.com/it/u=3706409540,3562397690&amp;fm=173&amp;app=49&amp;f=JPEG?w=312&amp;h=208&amp;s=93F67185709301DC8E14F89203000089"
+                                                            data-save="true" class=""></div>
+                                                </div>
+                                                <div class="index-list-album">
+                                                    <div class="index-list-album-wrapper"><img
+                                                            src="https://t11.baidu.com/it/u=3908779708,352779292&amp;fm=173&amp;app=49&amp;f=JPEG?w=312&amp;h=208&amp;s=88415F3009726A92CCF5D9C20300E0B0"
+                                                            data-save="true" class=""></div>
+                                                </div>
+                                            </div>
+                                            <div class="index-list-bottom">
+                                                <div class="index-list-main-time"><b
+                                                        class="tip-time">牛弹琴</b><b
+                                                        class="tip-hot tip-fillred">热点</b></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="18">
+                                    <div class="index-list-item" id="10168526195289130056"
+                                         style="display: block;">
+                                        <div class="index-list-main showleft">
+                                            <div class="index-list-image"><i class="ivideoplay"></i><img
+                                                    src="https://t10.baidu.com/it/u=3036240642,3021244439&amp;fm=173&amp;app=49&amp;f=JPEG?w=312&amp;h=208&amp;s=5AC7D8124ABE4D8C767A3CD9030080B9"
+                                                    data-save="true" class=""></div>
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title">
+                                                    「疫情日报」全球疫情升温，更害苦了中国这群未来精英
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">数可视</b><b
+                                                            class="tip-hot tip-fillred">热点</b>
+                                                        <!-- react-text: 294 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container afd-invaliditem"
+                                     style="display: none;"></div>
+                                <div class="index-list-item-container" data-order="20">
+                                    <div class="index-list-item" id="9827788447804782476"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">
+                                                    刚刚，黑龙江宣布疫情烈士子女高考加分，网友却吵翻天！
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    当下国内的疫情已经得到了控制，很多省份已经逐渐按部就班的恢复生产，这意味着，这一场全中国人民参...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">EMBA</b>
+                                                        <!-- react-text: 305 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="21">
+                                    <div class="index-list-item" id="9563985161162649752"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">Datsun 510 日料味道醇正的改装案例
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    [爱卡汽车汽车文化原创]可能当笔者说到一台Datsun510时很多人会感到陌生，实际上它是日产...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">爱卡汽车</b>
+                                                        <!-- react-text: 315 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="22">
+                                    <div class="index-list-item" id="10199105451720432072"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">
+                                                    （图表）「财经·行情」国际油价3月20日大幅下跌
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    新华社图表，北京，2020年3月21日图表：国际油价3月20日大幅下跌新华社记者胥晓璇编制
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">新华社图片</b>
+                                                        <!-- react-text: 325 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="23">
+                                    <div class="index-list-item" id="9121749094693080963"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">
+                                                    司法部牵头的联合调查组公布“女子离汉抵京事件”调查结果
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    联合调查组赶赴湖北，在湖北省调查组的密切配合下，就武汉女子监狱刑满释放人员黄某英感染新冠肺炎离...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">人民日报</b><b
+                                                            class="tip-hot tip-fillred">热点</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-list-item-container" data-order="24">
+                                    <div class="index-list-item" id="9944844594595340072"
+                                         style="display: block;">
+                                        <div class="index-list-main">
+                                            <div class="index-list-main-text">
+                                                <div class="index-list-main-title"
+                                                     style="display: block;">让青春之花绽放在党和人民最需要的地方
+                                                </div>
+                                                <div class="index-list-main-abs"
+                                                     style="display: none;">
+                                                    漫画来自网络。3月15日，习近平总书记给北京大学援鄂医疗队全体“90后”党员回信，高度肯定他们...
+                                                </div>
+                                                <div class="index-list-bottom">
+                                                    <div class="index-list-main-time"><b
+                                                            class="tip-time">中国青年网</b>
+                                                        <!-- react-text: 345 --><!-- /react-text -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-refresh-wrapper">
+                                <div class="ui-refresh" style="display: none;">加载中...</div>
+                                <div class="ui-refresh" style="display: block;">加载更多</div>
+                            </div>
+                        </div>
+                    </div><!-- react-text: 116 --><!-- /react-text --></div>
+            </div>
+        </div>
+    </div>
+</div>    <!-- 微信分享 -->    <!-- ispeed参数配置 -->
+<script type="text/javascript" src="js/lib_c9c8bcf.js"></script>
+<script type="text/javascript" src="js/third_712cd31.js"></script>
+<script type="text/javascript" src="js/app_3f6b968.js"></script>
+<script type="text/javascript" src="js/news-webapp-conf.js"></script>
+<script type="text/javascript">
+    /* eslint-disable */
+
+
+    /* dp统计相关代码 */
+    window.alogObjectConfig = {
+        product: '107',
+        page: '107_111',
+
+        // 性能
+        speed: {
+            sample: '0.15'
+        },
+
+        // js异常
+        exception: {
+            sample: '0.08'
+        },
+
+        // 新特性
+        feature: {
+            sample: '0.08'
+        },
+
+        csp: {
+            sample: '0.15',
+            'default-src': [
+                {match: '*bae.baidu.com', target: 'Accept,Warn'},
+                {
+                    match: '*.baidu.com,*.bdstatic.com,*.bdimg.com,localhost,*.hao123.com,*.hao123img.com',
+                    target: 'Accept'
+                },
+                {match: /^(127|172|192|10)(\.\d+){3}$/, target: 'Accept'},
+                {match: '*', target: 'Accept,Warn'}
+            ]
+        }
+    };
+    void function (a, b, c, d, e, f, g) {
+        a.alogObjectName = e, a[e] = a[e] || function () {
+            (a[e].q = a[e].q || []).push(arguments)
+        }, a[e].l = a[e].l || +new Date, d = "https:" === a.location.protocol ? "https://fex.bdstatic.com" + d : "http://fex.bdstatic.com" + d;
+        var h = !0;
+        if (a.alogObjectConfig && a.alogObjectConfig.sample) {
+            var i = Math.random();
+            a.alogObjectConfig.rand = i, i > a.alogObjectConfig.sample && (h = !1)
+        }
+        h && (f = b.createElement(c), f.async = !0, f.src = d + "?v=" + ~(new Date / 864e5) + ~(new Date / 864e5), g = b.getElementsByTagName(c)[0], g.parentNode.insertBefore(f, g))
+    }(window, document, "script", "/hunter/alog/alog.mobile.min.js", "alog"), void function () {
+        function a() {
+        }
+
+        window.PDC = {
+            mark: function (a, b) {
+                alog("speed.set", a, b || +new Date), alog.fire && alog.fire("mark")
+            }, init: function (a) {
+                alog("speed.set", "options", a)
+            }, view_start: a, tti: a, page_ready: a
+        }
+    }();
+    void function (n) {
+        var o = !1;
+        n.onerror = function (n, e, t, c) {
+            var i = !0;
+            return !e && /^script error/i.test(n) && (o ? i = !1 : o = !0), i && alog("exception.send", "exception", {
+                msg: n,
+                js: e,
+                ln: t,
+                col: c
+            }), !1
+        }, alog("exception.on", "catch", function (n) {
+            alog("exception.send", "exception", {
+                msg: n.msg,
+                js: n.path,
+                ln: n.ln,
+                method: n.method,
+                flag: "catch"
+            })
+        })
+    }(window);
+
+
+    // (function (d) {
+    //     var h = "https:" === d.location.protocol ? "https:" : "http:", f = d.document, e;
+    //     d.IS = {
+    //         data: {
+    //             examples: {},
+    //             common: {},
+    //             perf: {startTime: Date.now()},
+    //             perfMark: {},
+    //             jserr: [],
+    //             event: []
+    //         }, done: function (a, b, c) {
+    //             var g = this.data, e = g.common, d;
+    //             if (a) for (d in a) a.hasOwnProperty(d) && (e[d] = a[d]);
+    //             b = b || {};
+    //             a = b.event;
+    //             null == a && (b.event = {default: 1});
+    //             "number" === typeof a && (b.event = {default: a});
+    //             g.examples = b;
+    //             c = c || h + "//b.bdstatic.com/searchbox/icms/searchbox/img/common/openjs/ispeed/20170103/ispeed.min.js";
+    //             c = c + "?t=" + (Date.now() + "").substr(0,
+    //                 8);
+    //             b = f.createElement("script");
+    //             b.type = "text/javascript";
+    //             b.src = c;
+    //             f.head.appendChild(b)
+    //         }, _jsLoaded: function () {
+    //             var a = this.data;
+    //             a._needToSendPerfDataNow && IS._sendPerfData();
+    //             var b = a.jserr, c = b.length;
+    //             if (c) for (e = 0; e < c; e++) IS._httpGet("jserr", b[e]);
+    //             a = a.event;
+    //             if (b = a.length) for (e = 0; e < b; e++) IS._httpGet("event", a[e]);
+    //             IS._httpGet("pv")
+    //         }, sendJsErr: function (a, b) {
+    //             if (a) {
+    //                 var c = this.data.jserr;
+    //                 b && (a.flag = "catch");
+    //                 0 < a.msg.indexOf(":") && (a.type = a.msg.slice(0, a.msg.indexOf(":")));
+    //                 this._httpGet ? this._httpGet("jserr", a) :
+    //                     c.push(a)
+    //             }
+    //         }, sendJsCatch: function (a) {
+    //             this.sendJsErr(a, !0)
+    //         }, sendEvent: function (a, b) {
+    //             var c = this.data.event;
+    //             this._httpGet ? this._httpGet("event", {evt: a, msg: b}) : c.push({evt: a, msg: b})
+    //         }, addPerfData: function (a, b) {
+    //             var c = this.data;
+    //             null == b && (b = Date.now());
+    //             0 < b && (c.perf[a] = b)
+    //         }, markPerfData: function (a, b) {
+    //             var c = this.data;
+    //             0 < b && (c.perfMark[a] = b)
+    //         }, setPerfStartTime: function (a) {
+    //             var b = this.data;
+    //             a && (b.perf.startTime = a)
+    //         }, sendPerfData: function (a, b) {
+    //             var c = this.data, d = this._sendPerfData;
+    //             d ? d() : c._needToSendPerfDataNow = !0
+    //         }
+    //     };
+    //     f.addEventListener("DOMContentLoaded", function () {
+    //         IS.addPerfData("drt", Date.now())
+    //     }, !1);
+    //     d.onerror = function (a, b, c, e) {
+    //         if (null == b || !0 === /^script error/i.test(a)) return !0;
+    //         e = e || d.event && d.event.errorCharacter || 0;
+    //         IS.sendJsErr({msg: a, js: b, ln: c, col: e})
+    //     }
+    // })(window);
+
+
+    /* eslint-disable */
+    alog('speed.set', 'ht', +new Date);
+
+</script>
+<!--<script type="text/javascript"-->
+        <!--src="//b.bdstatic.com/searchbox/icms/searchbox/js/common/openjs/shareconfig/2017042519/shareconfig.min.js"></script>-->
+<script type="text/javascript">
+    require('52d995e');
+
+
+    /* eslint-disable */
+    alog('speed.set', 'drt', +new Date);
+    IS.done({
+        page_id: '107_001',
+        network: 'unknown',
+        cuid: ''
+    }, {
+        jserr: 1,
+        perf: .1,
+        pv: .1
+    });
+
+    void function (a, b, c, d, e, f) {
+        function g(b) {
+            a.attachEvent ? a.attachEvent("onload", b, !1) : a.addEventListener && a.addEventListener("load", b)
+        }
+
+        function h(a, c, d) {
+            d = d || 15;
+            var e = new Date;
+            e.setTime((new Date).getTime() + 1e3 * d), b.cookie = a + "=" + escape(c) + ";path=/;expires=" + e.toGMTString()
+        }
+
+        function i(a) {
+            var c = b.cookie.match(new RegExp("(^| )" + a + "=([^;]*)(;|$)"));
+            return null != c ? unescape(c[2]) : null
+        }
+
+        function j() {
+            var a = i("PMS_JT");
+            if (a) {
+                h("PMS_JT", "", -1);
+                try {
+                    a = a.match(/{["']s["']:(\d+),["']r["']:["']([\s\S]+)["']}/), a = a && a[1] && a[2] ? {
+                        s: parseInt(a[1]),
+                        r: a[2]
+                    } : {}
+                } catch (c) {
+                    a = {}
+                }
+                a.r && b.referrer.replace(/#.*/, "") != a.r || alog("speed.set", "wt", a.s)
+            }
+        }
+
+        if (a.alogObjectConfig) {
+            var k = a.alogObjectConfig.sample, l = a.alogObjectConfig.rand;
+            d = "https:" === a.location.protocol ? "https://fex.bdstatic.com" + d : "http://fex.bdstatic.com" + d, k && l && l > k || (g(function () {
+                alog("speed.set", "lt", +new Date), e = b.createElement(c), e.async = !0, e.src = d + "?v=" + ~(new Date / 864e5) + ~(new Date / 864e5), f = b.getElementsByTagName(c)[0], f.parentNode.insertBefore(e, f)
+            }), j())
+        }
+    }(window, document, "script", "/hunter/alog/dp.mobile.min.js");
+</script>
+
+
+<!--22701209900762862602032321-->
+<script> var _trace_page_logid = 2270120990; </script>
+</body>
+</html>

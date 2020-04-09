@@ -1,0 +1,2 @@
+var lo="湖南省", lc="";
+var localAddress={city:"", province:"湖南省"}

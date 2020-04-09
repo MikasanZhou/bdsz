@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: -apple-system-font, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 18px;
+}
+
+.cl {
+    clear: both;
+}
+
+
+
+/*.top{ width:20.94%; margin:2% auto;}
+.top images{ max-width:134px; width:100%;}*/
+.zong1{ width:95.28%; margin:0 auto; overflow:hidden;} /*565*/
+.right{ float:right;}
+
+.top{ margin-top:4%; overflow:hidden; border-bottom:solid #e8e8e8 1px; padding-bottom:2%;}
+.top_l{ width:29.219%; margin-left:4%;}
+.top_l img{ max-width:187px; width:100%;}
+.top_r{margin-right:4%; width:50%; text-align:right;}
+.top_wz1{ color:#24b6a0; margin-right:2%;}
+.top_wz2{ border-radius:3px; background:#24b6a0; color:#FFF; text-align:center; padding:0 4%; line-height:33px;}
+.top_wz2 a{ color:#FFF;}
+.dh{  color:#9e9e9e; margin:2% 0 0 0;}
+.wen_t{ font-weight:bold;font-size:16px;}
+.wen_s{ color:#9e9e9e; font-size:12px;}
+.wen_m{  line-height:180%;}
+.wen_t img{ width:98%; margin-left:1%; float:left; }
+
+
+.red {
+    color: #FF0000;
+    font-weight: 700;
+}
+
+.header {
+    background: #07B3E3;
+    padding: 10px 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav {
+    font-size: 12px;
+    color: #999;
+    padding: 8px 6px;
+}
+
+.question {
+    border-top: 1px solid #E3E3E7;
+    border-bottom: 1px solid #E3E3E7;
+}
+
+.question .question-status {
+    float: left;
+    width: 4%;
+    background: #1FBAE6;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+}
+.am-container span.manxing {
+    background: #fff;
+    color: #e6162d;
+}
+
+.question .question-info {
+    float: left;
+    margin-left: 10px;
+    width: 80%;
+}
+
+.question .question-info .question-title {
+    color: #FF0000;
+    margin-top: 10px;
+}
+
+.question .question-info .question-author {
+    color: #999;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.question-desc {
+    padding: 10px 8px;
+    border-bottom: 10px solid #E3E3E7;
+     line-height: 180%;;
+}
+
+.answer .doc-answer-title {
+    padding: 10px 8px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #07B3E3;
+}
+
+.doc-answer .doc-icon {
+    float: left;
+    width: 60px;
+}
+
+.doc-answer .doc-info {
+    margin-top: 10px;
+}
+
+.doc-answer .doc-info .doc-icon img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.doc-answer .doc-info .doc-desc {
+    float: left;
+    line-height: 20px;
+}
+
+.doc-answer .doc-info .doc-desc .doc-title {
+    font-size: 12px;
+    color: #888;
+}
+
+.doc-answer-content {
+    padding: 10px;
+      line-height: 180%;;;
+}
+
+.doc-like,
+.author-comment .author-comment-like {
+    color: #333;
+    padding: 10px;
+    border-top: 1px solid #E3E3E7;
+    border-bottom: 1px solid #E3E3E7;
+}
+
+.doc-answer-content img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.author-comment .author-info {
+    font-size: 16px;
+    color: #02879f;
+    padding: 10px;
+    border-top: 1px dashed #E3E3E7;
+    padding-bottom: 0px;
+}
+
+.author-comment .author-comment-content {
+    padding: 10px;
+      line-height: 180%;;;
+}
+
+.comment .title {
+    padding: 10px 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.comment ul {
+    list-style: none;
+}
+
+.comment .lz-msg .icon {
+    float: left;
+    width: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.comment .lz-msg .icon img {
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.comment .lz-msg .lz-info {
+    line-height: 20px;
+}
+
+.comment ul li {
+    margin-top: 10px;
+}
+
+.comment .lz-msg .lz-info .lz-name {
+    color: #02879f;
+}
+
+.comment .lz-msg .lz-info .lz-level {
+    color: #888;
+    font-size: 12px;
+}
+
+.comment .lz-content {
+    padding: 10px;
+    border-bottom: 1px solid rgb(188, 192, 197);
+      line-height: 180%;;;
+}
+
+.comment .lz-content img {
+    display: block;
+    width: 100%;
+}
+
+.buchong {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #000;
+}
+
+.buchong .buchong-title {
+    font-weight: 600;
+}
+
+.buchong .buchong-content {
+    text-indent: 2em;
+}
+
+.recomment {
+    background: #f1f1f1;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.recomment .recomment-name {
+    color: #02879F;
+    margin-top: 8px;
+    line-height: 150%;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #E3E3E7;
+}
+
+.touch-platform {
+    background: #07B3E3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.touch-platform a {
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 6px;
+    width: 70px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.left{ float:left;}
+.zong{ margin:0 auto; overflow:hidden;} /*565*/
+
+.zx{ width:100%; background:#f5f5f5; height:8px;}
+.hd_l{ width:13%;}
+.hd_l img{ border-radius:50%; width:60px; height:60px;}
+.hd_r{ width:85%; line-height:30px;}
+.name{ font-size:1.6em;}
+.zhiwu{ font-size:1.3em; color:#9e9e9e;}
+.wtfx{font-size:1.6em;}
+.zk{ font-size:0.85em; color:#9e9e9e;}
+.zk a{color:#9e9e9e;}
+.zk:after{content:""; display:inline-block; vertical-align:middle; box-sizing:border-box; width:2.2%; margin-left:1%; height:1rem; background:url(../images/arrow-down.png) center no-repeat; background-size:100% auto;}
+.shijian{ font-size:1.3em; color:#9e9e9e;}
+.zan{ float:right; width:15%; text-align:right;}
+.zan:before{content:""; display:inline-block; vertical-align:middle; box-sizing:border-box; width:21.2%; margin-right:4%; height:1rem; background:url(../images/xywy_07.png) center no-repeat; background-size:100% auto;}
+.ys{ margin-top:10px; margin-bottom:25px; overflow:hidden; margin-left:2%; background:#edecec; padding:2%;}
+.ys_r{ margin-left:2%;}
+.yshd{ font-size: 16px;
+    font-weight: 600;
+   /* border-bottom: 1px solid #07B3E3; */padding:10px 8px;}
+
+	.xuxian{ border-bottom: 1px dashed #E3E3E7;}
+	.ys_l{ width:32.92%;}
+.ys_l img{ max-width:186px; width:100%;}
+.ys_r{ width:65%; margin-left:2%; margin-top:2%;}
+.ys_name,.ys_zy{}
+.ys_wx{ color:#24b6a0;  }
+.yx_wx1{ color:#F00; }
+.ys_r img{ width:76.46%; max-width:216px; margin-top:4%;}
+
+.zjhf{ line-height:30px;}
+.zjhf_t{ color:#9e9e9e; font-size:1.3em;}
+.zjhf_b{ font-size:1.6em;}
+
+
+.zx1{ width:100%; border-bottom:solid #e8e8e8 1px; height:1px;}

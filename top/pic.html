@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+    <title>图片懒加载</title>
+</head>
+<style>
+    *{margin: 0;padding: 0;}
+    img{width: 48%;height: 150px;display: inline;border: 1px solid #ccc;}
+</style>
+<body>
+<div>
+    <img class="loadImg" data-url="img/1.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/2.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/3.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/4.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/5.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/1.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/1.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/1.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/1.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/1.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/6.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/7.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/8.jpg" src="img/2.png" alt="">
+    <img class="loadImg" data-url="img/2.jpg" src="img/2.png" alt="">
+</div>
+<script>
+    /*
+    *  init() 在初始化时调用
+    *
+    *  firstLoad() 是首次进入页面加载图片的方法
+    *
+    *  bindScroll() 是绑定滚动
+    * */
+    var loadImg = {
+        init: function () {
+            this.firstLoad();
+            var self = this;
+            window.onscroll = function () {
+                self.bindScroll();
+            };
+        },
+        firstLoad: function () {
+            //设备可用高度
+            var availHeight =  window.screen.availHeight;
+
+            //遍历#one下的img，然后替换路径
+            for(var x = 0;x < document.querySelectorAll('.loadImg').length;x++){
+                var el = document.querySelectorAll('.loadImg')[x];
+                //如果是首屏显示的图片
+                if (el.offsetTop < availHeight) {
+                    var imgUrl = el.dataset.url;
+                    var img = new Image();
+                    img.src = imgUrl;
+                    img.onload = (function (e) {
+                        el.src = el.dataset.url;
+                        el.removeAttribute('data-url');
+                    })();
+                } else {
+                    break;
+                }
+            }
+        },
+        bindScroll: function () {
+            // 设备可用高度
+            var availHeight = window.screen.availHeight;
+            // 滚动的高度
+            var scrollHeight = document.documentElement.scrollTop;
+            // 距img元素显露出的距离
+            var diff = 50;
+
+            // 判断如果显示出来了#two
+            for (var x = 0; x < document.querySelectorAll('.loadImg').length; x++) {
+                var el = document.querySelectorAll('.loadImg')[x];
+                // img距顶部的高度
+                var contentTop = el.offsetTop;
+                // 判断此时显示出img
+                if (scrollHeight + diff > contentTop - availHeight) {
+                    if (el.hasAttribute('data-url')) {
+                        var imgUrl = el.getAttribute('data-url');
+                        var img = new Image();
+                        img.src = imgUrl;
+                        img.onload = (function () {
+                            el.src = el.getAttribute('data-url');
+                            el.removeAttribute('data-url');
+                        })();
+                    }
+                }
+            }
+        }
+    };
+    loadImg.init();
+</script>
+</body>
+</html>
+

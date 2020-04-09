@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: white;
+}
+ul li {
+	list-style: none;
+}
+.content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding:0 16px;
+}
+.nameid {
+	color: cornflowerblue;
+	/*text-align: center;*/
+	font-size: 1.2rem !important;
+	font-weight: 200 !important;
+}
+/* Font Color */
+.red {
+	color: red;
+}
+.brown {
+	color: saddlebrown;
+	font-size: 2rem;
+}
+.wwxx {
+	background: yellow;
+	color: black;
+	font-size: 2.2rem;
+}
+
+.wwxx22 {
+	background: yellow;
+	color: black;
+}
+/* Font Color End */
+
+
+.content h1 {
+	width: 100%;
+	text-align: center;
+	font-size: 2.5rem;
+	padding:8px 0;
+}
+.content .titleimg {
+	width: 100%;
+	text-align: center;
+	margin:16px 0;
+}
+.content .titleimg img{width:100%;}
+.case-one {
+	height: auto;
+	border: 3px solid rgb(164,0,0);
+	border-radius: 25px;
+}
+.case-one p,
+.case-two p,
+.case-four p,
+.case-six p,
+.case-eight p {
+	font-size: 1.8rem;
+	font-family: "黑体";
+	line-height: 3rem;
+	text-indent: 3rem;
+}
+.case-one p {
+	padding: 8px 16px;
+}
+.case-two {
+	height: auto;
+	border: 3px dashed rgb(164,0,0);
+	border-radius: 25px;
+}
+.case-two p {
+	padding: 8px 16px;
+}
+.case-three {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.case-four {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.case-four p {
+	padding: 8px 16px;
+	margin:0;
+}
+.case-five {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.case-six {
+	height: auto;
+	border: 3px dashed rgb(164,0,0);
+	border-radius: 25px;
+}
+.case-six p {
+	padding: 8px 16px;
+}
+.case-seven {
+	height: auto;
+	text-align: center;
+}
+.case-eight {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.case-eight p {
+	padding: 0 16px;
+}
+.left {
+	width:100%;
+	text-align: center;
+}
+.right {
+	width:100%;
+	text-align: center;
+}
+.case-nine {
+	width: 100%;
+	height: 50px;
+	
+}	
+.case-nine ul li {
+	float: left;
+	list-style: none;
+	width: 130px;
+}
+/* 评论 */
+.comment-one img,
+.comment-two img,
+.comment-three img,
+.comment-four img {
+	width: 100%;
+	height: 100%;
+}
+.comment-one,
+.comment-two,
+.comment-three,
+.comment-four {
+	height: auto;
+	/*border: 3px solid darkred;*/
+	
+}
+.comment-left {
+	float: left;
+	width: 16%;
+	margin-right:8px;
+}
+.comment-right {
+	float: left;
+	width: 80%;
+}
+.comment-one p,
+.comment-two p,
+.comment-three p,
+.comment-four p {
+	font-size: 1.5rem;
+	font-weight: 600;
+	font-family: "黑体";
+	line-height: 2rem;
+	margin:0;
+}
+.comment-content-one {
+	padding: 16px 10px 64px 8px;
+	margin:0 16px;
+	border-bottom: 1px dashed rgb(164,0,0);
+}
+.comment-content-two {
+	padding: 16px 10px 64px 8px;
+	margin:0 16px;
+	border-bottom: 1px dashed rgb(164,0,0);
+}
+.comment-content-three {
+	padding: 16px 10px 64px 8px;
+	margin:0 16px;
+	border-bottom: 1px dashed rgb(164,0,0);
+}
+.comment-content-four {
+	padding: 16px 10px 64px 8px;
+	margin:0 16px;
+	border-bottom: 1px dashed rgb(164,0,0);
+}
+.comment {
+	border: 1px dashed rgb(164,0,0);
+	border-radius: 16px;
+}
+.copyright {
+	width: 100%;
+	color: grey;
+	text-align: center;
+}
+
+
+/* Footer */
+.bottom {
+	width: 100%;
+	height: 70px;
+	background:white;
+	position: fixed;
+	bottom: 0;
+}
+.wx-left {
+	float: left;
+	width: 20%;
+}
+.wx-left img {
+	float: right;
+}
+.wx-right {
+	float: left;
+}
+.wx-right p {
+	font-size: 1.5rem;
+	font-family: "微软雅黑";
+	line-height: 50px;
+	font-weight: bold;
+}
+.wx-right b {
+	color: red;	
+}
