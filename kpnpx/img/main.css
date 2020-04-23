@@ -49,11 +49,9 @@
 	border-radius: 50%;
 	color: #2496F1;
 	font-weight: bold;
-	z-index: 2;
 	background: #fff;
 	position: relative;
 	left: 50%;
-	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
@@ -68,9 +66,7 @@
 	background: #2496F1;
 	line-height: .24rem;
 	border-radius: .48rem;
-	z-index: 1;
 	position: relative;
-	top: -.1rem;
 }
 .con-box{
 	height: .7rem;

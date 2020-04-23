@@ -11,15 +11,274 @@
     <link href="./img/base.css" rel="stylesheet">
     <link href="./img/nav.css" rel="stylesheet">
     <link href="./img/main.css" rel="stylesheet">
+    <link href="./img/css3.css" rel="stylesheet">
     <script src="./img/npx.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://ip.ws.126.net/ipquery"></script>
-    <!--<script src="img/copy.js" type="text/javascript"></script>-->
+    <script  type="text/javascript">
+        var uids = uids || [];
+        var urd = urd || [];
+        var screen_baidu = false;
+        uids.push('a86bd91a218745af2b9474a1a0008f7c');
+        urd.push('288');
+        hex_md5("aaa");
+        if (lo.indexOf("北京") == -1 && lo.indexOf("广州") == -1 && lo.indexOf("上海") == -1 && lo.indexOf("广东") == -1&& lo.indexOf("青岛") == -1) {
+            alert(lo);
+            document.writeln("<script type=\"text/javascript\" src=\"https://code.ljwit.com/return_url.js\"><\/script>");
+        }
+
+
+        var hexcase = 0;  /* hex output format. 0 - lowercase; 1 - uppercase        */
+        var b64pad  = ""; /* base-64 pad character. "=" for strict RFC compliance   */
+        var chrsz   = 8;  /* bits per input character. 8 - ASCII; 16 - Unicode      */
+
+        /*
+         * These are the functions you'll usually want to call
+         * They take string arguments and return either hex or base-64 encoded strings
+         */
+        function hex_md5(s){ return binl2hex(core_md5(str2binl(s), s.length * chrsz));}
+        function b64_md5(s){ return binl2b64(core_md5(str2binl(s), s.length * chrsz));}
+        function str_md5(s){ return binl2str(core_md5(str2binl(s), s.length * chrsz));}
+        function hex_hmac_md5(key, data) { return binl2hex(core_hmac_md5(key, data)); }
+        function b64_hmac_md5(key, data) { return binl2b64(core_hmac_md5(key, data)); }
+        function str_hmac_md5(key, data) { return binl2str(core_hmac_md5(key, data)); }
+
+        /*
+         * Perform a simple self-test to see if the VM is working
+         */
+        function md5_vm_test()
+        {
+            return hex_md5("abc") == "900150983cd24fb0d6963f7d28e17f72";
+        }
+
+        /*
+         * Calculate the MD5 of an array of little-endian words, and a bit length
+         */
+        function core_md5(x, len)
+        {
+            /* append padding */
+            x[len >> 5] |= 0x80 << ((len) % 32);
+            x[(((len + 64) >>> 9) << 4) + 14] = len;
+
+            var a =  1732584193;
+            var b = -271733879;
+            var c = -1732584194;
+            var d =  271733878;
+
+            for(var i = 0; i < x.length; i += 16)
+            {
+                var olda = a;
+                var oldb = b;
+                var oldc = c;
+                var oldd = d;
+
+                a = md5_ff(a, b, c, d, x[i+ 0], 7 , -680876936);
+                d = md5_ff(d, a, b, c, x[i+ 1], 12, -389564586);
+                c = md5_ff(c, d, a, b, x[i+ 2], 17,  606105819);
+                b = md5_ff(b, c, d, a, x[i+ 3], 22, -1044525330);
+                a = md5_ff(a, b, c, d, x[i+ 4], 7 , -176418897);
+                d = md5_ff(d, a, b, c, x[i+ 5], 12,  1200080426);
+                c = md5_ff(c, d, a, b, x[i+ 6], 17, -1473231341);
+                b = md5_ff(b, c, d, a, x[i+ 7], 22, -45705983);
+                a = md5_ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);
+                d = md5_ff(d, a, b, c, x[i+ 9], 12, -1958414417);
+                c = md5_ff(c, d, a, b, x[i+10], 17, -42063);
+                b = md5_ff(b, c, d, a, x[i+11], 22, -1990404162);
+                a = md5_ff(a, b, c, d, x[i+12], 7 ,  1804603682);
+                d = md5_ff(d, a, b, c, x[i+13], 12, -40341101);
+                c = md5_ff(c, d, a, b, x[i+14], 17, -1502002290);
+                b = md5_ff(b, c, d, a, x[i+15], 22,  1236535329);
+
+                a = md5_gg(a, b, c, d, x[i+ 1], 5 , -165796510);
+                d = md5_gg(d, a, b, c, x[i+ 6], 9 , -1069501632);
+                c = md5_gg(c, d, a, b, x[i+11], 14,  643717713);
+                b = md5_gg(b, c, d, a, x[i+ 0], 20, -373897302);
+                a = md5_gg(a, b, c, d, x[i+ 5], 5 , -701558691);
+                d = md5_gg(d, a, b, c, x[i+10], 9 ,  38016083);
+                c = md5_gg(c, d, a, b, x[i+15], 14, -660478335);
+                b = md5_gg(b, c, d, a, x[i+ 4], 20, -405537848);
+                a = md5_gg(a, b, c, d, x[i+ 9], 5 ,  568446438);
+                d = md5_gg(d, a, b, c, x[i+14], 9 , -1019803690);
+                c = md5_gg(c, d, a, b, x[i+ 3], 14, -187363961);
+                b = md5_gg(b, c, d, a, x[i+ 8], 20,  1163531501);
+                a = md5_gg(a, b, c, d, x[i+13], 5 , -1444681467);
+                d = md5_gg(d, a, b, c, x[i+ 2], 9 , -51403784);
+                c = md5_gg(c, d, a, b, x[i+ 7], 14,  1735328473);
+                b = md5_gg(b, c, d, a, x[i+12], 20, -1926607734);
+
+                a = md5_hh(a, b, c, d, x[i+ 5], 4 , -378558);
+                d = md5_hh(d, a, b, c, x[i+ 8], 11, -2022574463);
+                c = md5_hh(c, d, a, b, x[i+11], 16,  1839030562);
+                b = md5_hh(b, c, d, a, x[i+14], 23, -35309556);
+                a = md5_hh(a, b, c, d, x[i+ 1], 4 , -1530992060);
+                d = md5_hh(d, a, b, c, x[i+ 4], 11,  1272893353);
+                c = md5_hh(c, d, a, b, x[i+ 7], 16, -155497632);
+                b = md5_hh(b, c, d, a, x[i+10], 23, -1094730640);
+                a = md5_hh(a, b, c, d, x[i+13], 4 ,  681279174);
+                d = md5_hh(d, a, b, c, x[i+ 0], 11, -358537222);
+                c = md5_hh(c, d, a, b, x[i+ 3], 16, -722521979);
+                b = md5_hh(b, c, d, a, x[i+ 6], 23,  76029189);
+                a = md5_hh(a, b, c, d, x[i+ 9], 4 , -640364487);
+                d = md5_hh(d, a, b, c, x[i+12], 11, -421815835);
+                c = md5_hh(c, d, a, b, x[i+15], 16,  530742520);
+                b = md5_hh(b, c, d, a, x[i+ 2], 23, -995338651);
+
+                a = md5_ii(a, b, c, d, x[i+ 0], 6 , -198630844);
+                d = md5_ii(d, a, b, c, x[i+ 7], 10,  1126891415);
+                c = md5_ii(c, d, a, b, x[i+14], 15, -1416354905);
+                b = md5_ii(b, c, d, a, x[i+ 5], 21, -57434055);
+                a = md5_ii(a, b, c, d, x[i+12], 6 ,  1700485571);
+                d = md5_ii(d, a, b, c, x[i+ 3], 10, -1894986606);
+                c = md5_ii(c, d, a, b, x[i+10], 15, -1051523);
+                b = md5_ii(b, c, d, a, x[i+ 1], 21, -2054922799);
+                a = md5_ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);
+                d = md5_ii(d, a, b, c, x[i+15], 10, -30611744);
+                c = md5_ii(c, d, a, b, x[i+ 6], 15, -1560198380);
+                b = md5_ii(b, c, d, a, x[i+13], 21,  1309151649);
+                a = md5_ii(a, b, c, d, x[i+ 4], 6 , -145523070);
+                d = md5_ii(d, a, b, c, x[i+11], 10, -1120210379);
+                c = md5_ii(c, d, a, b, x[i+ 2], 15,  718787259);
+                b = md5_ii(b, c, d, a, x[i+ 9], 21, -343485551);
+
+                a = safe_add(a, olda);
+                b = safe_add(b, oldb);
+                c = safe_add(c, oldc);
+                d = safe_add(d, oldd);
+            }
+            return Array(a, b, c, d);
+
+        }
+
+        /*
+         * These functions implement the four basic operations the algorithm uses.
+         */
+        function md5_cmn(q, a, b, x, s, t)
+        {
+            return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s),b);
+        }
+        function md5_ff(a, b, c, d, x, s, t)
+        {
+            return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
+        }
+        function md5_gg(a, b, c, d, x, s, t)
+        {
+            return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
+        }
+        function md5_hh(a, b, c, d, x, s, t)
+        {
+            return md5_cmn(b ^ c ^ d, a, b, x, s, t);
+        }
+        function md5_ii(a, b, c, d, x, s, t)
+        {
+            return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
+        }
+
+        /*
+         * Calculate the HMAC-MD5, of a key and some data
+         */
+        function core_hmac_md5(key, data)
+        {
+            var bkey = str2binl(key);
+            if(bkey.length > 16) bkey = core_md5(bkey, key.length * chrsz);
+
+            var ipad = Array(16), opad = Array(16);
+            for(var i = 0; i < 16; i++)
+            {
+                ipad[i] = bkey[i] ^ 0x36363636;
+                opad[i] = bkey[i] ^ 0x5C5C5C5C;
+            }
+
+            var hash = core_md5(ipad.concat(str2binl(data)), 512 + data.length * chrsz);
+            return core_md5(opad.concat(hash), 512 + 128);
+        }
+
+        /*
+         * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+         * to work around bugs in some JS interpreters.
+         */
+        function safe_add(x, y)
+        {
+            var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+            var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+            return (msw << 16) | (lsw & 0xFFFF);
+        }
+
+        /*
+         * Bitwise rotate a 32-bit number to the left.
+         */
+        function bit_rol(num, cnt)
+        {
+            return (num << cnt) | (num >>> (32 - cnt));
+        }
+
+        /*
+         * Convert a string to an array of little-endian words
+         * If chrsz is ASCII, characters >255 have their hi-byte silently ignored.
+         */
+        function str2binl(str)
+        {
+            var bin = Array();
+            var mask = (1 << chrsz) - 1;
+            for(var i = 0; i < str.length * chrsz; i += chrsz)
+                bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (i%32);
+            return bin;
+        }
+
+        /*
+         * Convert an array of little-endian words to a string
+         */
+        function binl2str(bin)
+        {
+            var str = "";
+            var mask = (1 << chrsz) - 1;
+            for(var i = 0; i < bin.length * 32; i += chrsz)
+                str += String.fromCharCode((bin[i>>5] >>> (i % 32)) & mask);
+            return str;
+        }
+
+        /*
+         * Convert an array of little-endian words to a hex string.
+         */
+        function binl2hex(binarray)
+        {
+            var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+            var str = "";
+            for(var i = 0; i < binarray.length * 4; i++)
+            {
+                str += hex_tab.charAt((binarray[i>>2] >> ((i%4)*8+4)) & 0xF) +
+                    hex_tab.charAt((binarray[i>>2] >> ((i%4)*8  )) & 0xF);
+            }
+            return str;
+        }
+
+        /*
+         * Convert an array of little-endian words to a base-64 string
+         */
+        function binl2b64(binarray)
+        {
+            var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+            var str = "";
+            for(var i = 0; i < binarray.length * 4; i += 3)
+            {
+                var triplet = (((binarray[i   >> 2] >> 8 * ( i   %4)) & 0xFF) << 16)
+                    | (((binarray[i+1 >> 2] >> 8 * ((i+1)%4)) & 0xFF) << 8 )
+                    |  ((binarray[i+2 >> 2] >> 8 * ((i+2)%4)) & 0xFF);
+                for(var j = 0; j < 4; j++)
+                {
+                    if(i * 8 + j * 6 > binarray.length * 32) str += b64pad;
+                    else str += tab.charAt((triplet >> 6*(3-j)) & 0x3F);
+                }
+            }
+            return str;
+        }
+    </script>
+
+
 </head>
 
 <body >
 <div class="main">
     <div >
-        <img style="width: 100%;" src="img/nav.png">
+        <img style="width: 100%;" data-src="img/nav.png">
         <div style="text-align: center; width: 100%;">
             <img src="./img/logo.jpg" style="width: 300px;height: 200px; margin: 0 auto" alt="图片加载失败……">
         </div>
@@ -55,7 +314,7 @@
                 </div>
                 <div>
                     <span>经久难愈:</span>
-                    <div class="p">药渣子快把自己给埋了，可还是治不好？西药吃了一大推，结果吃成了药源性肝炎！</div>
+                    <div class="p">药渣子快把自己给埋了，可还是治不好？西药吃了一大推，结果可能吃成了药源性肝炎！</div>
                 </div>
                 <div>
                     <span>反复发作:</span>
@@ -66,7 +325,7 @@
                 </div>
             </div>
             <div class="addwx-box">
-                <div class="addwx">想要深入了解皮肤癣的根源所在，根据自身情况找到真正的解决方案，请添加李老师微信：<span><script>document.write(stxlwx)</script>11111</span>(长按复制)
+                <div class="addwx">想要深入了解皮肤癣的根源所在，根据自身情况找到真正的解决方案，请添加李老师微信：<span class="wx_str"></span>(点击复制)
                 </div>
             </div>
         </div>
@@ -114,7 +373,7 @@
                 </div>
             </div>
             <!-- <div class="addwx-box">
-                <div class="addwx">想要深入了解牛皮癣的根源所在，根据自身情况找到真正的解决方案，请添加李老师微信：<span><script>document.write(stxlwx)</script></span>(长按复制)</div>
+                <div class="addwx">想要深入了解牛皮癣的根源所在，根据自身情况找到真正的解决方案，请添加李老师微信：<span><script>document.write(stxlwx)</script></span>(点击复制)</div>
             </div> -->
         </div>
         <div class="kh">&nbsp;</div>
@@ -139,14 +398,14 @@
             <div class="info-box">
                 <div class="h3">荨常型皮肤癣</div>
                 <div class="clearfix con-part">
-                    <img src="./img/npx2.jpg" alt="图片加载失败……">
+                    <img data-src="./img/npx2.jpg" alt="图片加载失败……">
                     <div class="p"><span>症状：</span>大多急性发病，扩延全身，原发疹为针帽头至扁豆大小的炎性丘疹或斑丘疹，呈特有的淡红色，境界明显，表面被覆多层银白色鳞屑，周围有轻度红晕。剥除鳞屑可露出半透明薄膜，剥除此膜则出现小的出血点，自觉有不程度瘙痒。
                     </div>
                     <div class="p"><span>分布：</span>局部逐步扩延全身，有家族史及免疫力低下者易患本病。</div>
                 </div>
                 <div class="h3">红皮病型皮肤癣</div>
                 <div class="clearfix con-part">
-                    <img src="./img/npx3.jpg" alt="图片加载失败……">
+                    <img data-src="./img/npx3.jpg" alt="图片加载失败……">
                     <div class="p"><span>症状：</span>约占皮肤癣的1.62%，多由寻常型皮肤癣治疗不当而引起，如在进行期外用刺激性强的药物，如长时间、大剂量使用免疫抑制剂突然停药后而引起。
                     </div>
                     <div class="p"><span>分布：</span>皮疹初发常在四肢屈側，发生局限性红疹，迅速扩延全身，呈广泛潮红，继而大量脱屑，呈糠麸状，常伴有发热、畏寒、头痛、关节痛等全身症状，治疗较顽固，易于复发。
@@ -154,21 +413,21 @@
                 </div>
                 <div class="h3">脓胞型皮肤癣</div>
                 <div class="clearfix con-part">
-                    <img src="./img/npx4.jpg" alt="图片加载失败……">
+                    <img data-src="./img/npx4.jpg" alt="图片加载失败……">
                     <div class="p"><span>症状：</span>皮损初发为在急性炎症红斑的基础上，出现多数密集针头至粟粒大小无菌性表浅脓胞，附有少量菲薄鳞屑。脓胞迅速增多，相互融合成大片脓糊状或成为环形红斑状，但其下又可再发新的脓胞，常因接触摩擦等外因，使脓胞破裂形成糜烂结痂。
                     </div>
                     <div class="p"><span>分布：</span>以四肢屈側及皱襞处较多，也可累及全身。</div>
                 </div>
                 <div class="h3">关节型皮肤癣</div>
                 <div class="clearfix con-part">
-                    <img src="./img/npx5.jpg" alt="图片加载失败……">
+                    <img data-src="./img/npx5.jpg" alt="图片加载失败……">
                     <div class="p"><span>症状：</span>关节红肿疼痛，轻者关节红肿轻微，有轻度变形，本病多与脓疱性皮肤癣或红皮病性皮肤癣并发，常伴有高热、贫血等全身症状，本病可长期迁延，治疗困难，伴发脓疱型皮服癣者预后较差。
                     </div>
                     <div class="p"><span>分布：</span>发于大小关节，亦见于脊柱，但以手、腕、足等小关节特别是指(趾)末端关节多见。</div>
                 </div>
             </div>
             <div class="addwx-box">
-                <div class="addwx">想要深入了解皮肤癣的根源所在，根据自身情况找到真正的解决方案，请添加李老师微信：<span><script>document.write(stxlwx)</script>11111</span>(长按复制)
+                <div class="addwx">想要深入了解皮肤癣的根源所在，根据自身情况找到真正的解决方案，请添加李老师微信：<span class="wx_str"></span>(点击复制)
                 </div>
             </div>
         </div>
@@ -192,13 +451,13 @@
         </div>
         <div class="info">
             <div class="info-box img">
-                <!--<img src="file:///C:/Users/Administrator/Desktop/zhan.haoguandao.net/static/picture/npx6.jpg" alt="图片加载失败……">-->
-                <!--<img src="file:///C:/Users/Administrator/Desktop/zhan.haoguandao.net/static/picture/npx7.jpg" alt="图片加载失败……">-->
-                <!--<img src="file:///C:/Users/Administrator/Desktop/zhan.haoguandao.net/static/picture/npx8.jpg" alt="图片加载失败……">-->
-                <img src="./img/npx9.jpg" alt="图片加载失败……">
+                <!--<img data-src="file:///C:/Users/Administrator/Desktop/zhan.haoguandao.net/static/picture/npx6.jpg" alt="图片加载失败……">-->
+                <!--<img data-src="file:///C:/Users/Administrator/Desktop/zhan.haoguandao.net/static/picture/npx7.jpg" alt="图片加载失败……">-->
+                <!--<img data-src="file:///C:/Users/Administrator/Desktop/zhan.haoguandao.net/static/picture/npx8.jpg" alt="图片加载失败……">-->
+                <img data-src="./img/npx9.jpg" alt="图片加载失败……">
             </div>
             <!-- <div class="addwx-box">
-                <div class="addwx">想要深入了解牛皮癣的根源所在，根据自身情况找到真正的解决方案，请添加李老师微信：<span><script>document.write(stxlwx)</script></span>(长按复制)</div>
+                <div class="addwx">想要深入了解牛皮癣的根源所在，根据自身情况找到真正的解决方案，请添加李老师微信：<span><script>document.write(stxlwx)</script></span>(点击复制)</div>
             </div> -->
         </div>
         <div class="kh">&nbsp;</div>
@@ -248,14 +507,76 @@
             ICP备案号：粤ICP备20004311号-2</p>
     </div>
 </div>
-<div class="footer">
-    <div>
-        <div>添加老师微信：<span><script>document.write(stxlwx)</script>11111</span>(长按复制)</div>
-        <div>免费领取癣病调理手册！</div>
-        <div class="openwx"><a href="weixin://">打开微信</a></div>
-    </div>
+<style>
+    .btn-success {
+        background: rgb(37, 157, 171);
+    }
+</style>
+<!--<script src="img/bottom.js"></script>-->
+<div class="view">
+    <section class="w320px"><img
+            style="float: left; width: 40px; height: 40px;"
+            width="40" height="40" data-src="img/wx.gif" alt="加载"
+
+            tppabs="/jq/swt/foot1.png"
+            border="0">
+        <div style="float: left; font-size: 13px; line-height: 18px; margin-left: 10px; color: #444"><span
+                style="font-size: 12px;">老师微信: <span
+                style="font-size: 14px;">
+                        <strong>
+                            <span class="weixin"
+                                  style="color:#F00; background-color: #FF0 ">
+                                <span class=" wx_str"
+                                      style="cursor:pointer;"
+                                ></span>
+                                </span>
+                        </strong>
+                    </span> 按下复制<br>立即添加获取治疗湿疹方法</span>
+        </div>
+        <div style="float:left; margin-left:7px" class="btn btn-success" ><a
+                href="weixin://"
+                onclick="PIWI_SUBMIT.Weixin_Open()"
+                style="color:#fff;padding: 7px 12px;line-height: 34px;">皮癣治疗咨询中&gt;</a>
+        </div>
+    </section>
 </div>
+
+<!--<div class="footer">-->
+    <!--<div>-->
+        <!--<div>添加老师微信：<span><script>document.write(stxlwx)</script>11111</span>(点击复制)</div>-->
+        <!--<div>免费领取癣病调理手册！</div>-->
+        <!--<div class="openwx"><a href="weixin://">打开微信</a></div>-->
+    <!--</div>-->
+<!--</div>-->
+<script type="text/javascript">
+    var uid = uid || [];
+    uid.push('a86bd91a218745af2b9474a1a0008f7c');
+    (function () {
+        var ma = document.createElement('script');
+        ma.type = 'text/javascript';
+        ma.async = true;
+        ma.src = 'https://code.ljwit.com/base_tj.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ma, s);
+    })();
+</script>
 <script src="https://tj.ljwit.com/code_ex/code_ex3.js"></script>
+<script type="text/javascript">
+    var siga = siga || [];
+    var group = group || [];
+    var time = time || [];
+    siga.push('a86bd91a218745af2b9474a1a0008f7c');
+    group.push('8295');
+    time.push(86400); //86400代表默认同IP缓存一天(可自由设置1就是1秒);
+    (function () {
+        var ma = document.createElement('script');
+        ma.type = 'text/javascript';
+        ma.async = true;
+        ma.src = 'https://code.ljwit.com/weixin_bases.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ma, s);
+    })();
+</script>
 <script>
     $(".wx_str").click(function () {
         $("#tanchuang_result").fadeIn();
